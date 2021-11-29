@@ -1,0 +1,1 @@
+{"version":3,"file":"book-routes.js","sourceRoot":"","sources":["../../src/routes/book-routes.ts"],"names":[],"mappings":";;;AAAA,oEAAgE;AAEhE,MAAM,MAAM,GAAG,OAAO,CAAC,SAAS,CAAC,CAAC,MAAM,CAAC;AAEzC,MAAM,UAAU,GAAG,MAAM,EAAE,CAAC;AAMnB,gCAAU;AAJnB,UAAU,CAAC,GAAG,CAAC,GAAG,EAAE,gCAAc,CAAC,MAAM,CAAC,CAAC;AAE3C,UAAU,CAAC,GAAG,CAAC,MAAM,EAAE,gCAAc,CAAC,OAAO,CAAC,CAAC"}

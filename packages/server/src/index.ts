@@ -7,7 +7,6 @@ import { connect } from "./db/connect";
 
 connect()
   .then(async () => {
-    // await resetTimer();
     app.listen(config.app.port, () => {
       console.log(`Server is now running at port ${config.app.port}!`);
     });
