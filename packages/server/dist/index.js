@@ -12,16 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = require("./server");
 const config_1 = require("./config/config");
 const connect_1 = require("./db/connect");
-// import { resetTimer } from "./db/seed";
-// import { seedAuthors } from "./db/seed";
-// import { seedBooks } from "./db/seed";
+const seed_1 = require("./db/seed");
+const seed_2 = require("./db/seed");
 (0, connect_1.connect)()
     .then(() => __awaiter(void 0, void 0, void 0, function* () {
     server_1.app.listen(config_1.config.app.port, () => {
         console.log(`Server is now running at port ${config_1.config.app.port}!`);
     });
-    // await seedAuthors();
-    // await seedBooks();
+    yield (0, seed_1.seedAuthors)();
+    yield (0, seed_2.seedBooks)();
 }))
     .catch((error) => {
     console.log(`Error connecting the server: ${error}`);

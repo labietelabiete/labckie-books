@@ -1,4 +1,4 @@
-const db = require("../models");
+import db from "../models";
 
 export async function getSeedBooks() {
   const { _id: gloriaFuertesId } = await db.Author.findOne(

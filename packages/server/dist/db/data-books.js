@@ -8,19 +8,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getSeedBooks = void 0;
-const db = require("../models");
+const models_1 = __importDefault(require("../models"));
 function getSeedBooks() {
     return __awaiter(this, void 0, void 0, function* () {
-        const { _id: gloriaFuertesId } = yield db.Author.findOne({ firstName: "Gloria", lastName: "Fuertes" }, { _id: 1 }).lean();
-        const { _id: carloPadialId } = yield db.Author.findOne({ firstName: "Carlo", lastName: "Padial" }, { _id: 1 }).lean();
-        const { _id: florenceParryId } = yield db.Author.findOne({ firstName: "Florence", lastName: "Parry Heide" }, { _id: 1 }).lean();
-        const { _id: trevorNoahId } = yield db.Author.findOne({ firstName: "Trevor", lastName: "Noah" }, { _id: 1 }).lean();
-        const { _id: ianSvenoniusId } = yield db.Author.findOne({ firstName: "Ian", lastName: "Svenonius" }, { _id: 1 }).lean();
-        const { _id: alastairBonnett } = yield db.Author.findOne({ firstName: "Alastair", lastName: "Bonnett" }, { _id: 1 }).lean();
-        const { _id: cristopheGalfardId } = yield db.Author.findOne({ firstName: "Christophe", lastName: "Galfard" }, { _id: 1 }).lean();
-        const { _id: gianniRodari } = yield db.Author.findOne({ firstName: "Gianni", lastName: "Rodari" }, { _id: 1 }).lean();
+        const { _id: gloriaFuertesId } = yield models_1.default.Author.findOne({ firstName: "Gloria", lastName: "Fuertes" }, { _id: 1 }).lean();
+        const { _id: carloPadialId } = yield models_1.default.Author.findOne({ firstName: "Carlo", lastName: "Padial" }, { _id: 1 }).lean();
+        const { _id: florenceParryId } = yield models_1.default.Author.findOne({ firstName: "Florence", lastName: "Parry Heide" }, { _id: 1 }).lean();
+        const { _id: trevorNoahId } = yield models_1.default.Author.findOne({ firstName: "Trevor", lastName: "Noah" }, { _id: 1 }).lean();
+        const { _id: ianSvenoniusId } = yield models_1.default.Author.findOne({ firstName: "Ian", lastName: "Svenonius" }, { _id: 1 }).lean();
+        const { _id: alastairBonnett } = yield models_1.default.Author.findOne({ firstName: "Alastair", lastName: "Bonnett" }, { _id: 1 }).lean();
+        const { _id: cristopheGalfardId } = yield models_1.default.Author.findOne({ firstName: "Christophe", lastName: "Galfard" }, { _id: 1 }).lean();
+        const { _id: gianniRodari } = yield models_1.default.Author.findOne({ firstName: "Gianni", lastName: "Rodari" }, { _id: 1 }).lean();
         return [
             {
                 title: "El libro de Gloria Fuertes",
