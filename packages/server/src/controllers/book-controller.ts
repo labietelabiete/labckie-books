@@ -1,4 +1,4 @@
-const db = require("../models");
+import db from "../models";
 import { Request, Response, NextFunction } from "express";
 
 async function getAll(req: Request, res: Response, next: NextFunction) {
@@ -10,10 +10,16 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
         $project: {
           title: 1,
           caption: 1,
+          sinopsis: 1,
+          designer: 1,
+          translator: 1,
           price: 1,
           stock: 1,
           authorId: 1,
           createdAt: 1,
+          techData: 1,
+          images: 1,
+          colors: 1,
         },
       },
       {

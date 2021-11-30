@@ -8,22 +8,31 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.bookController = void 0;
-const db = require("../models");
+const models_1 = __importDefault(require("../models"));
 function getAll(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // const { page = 0, limit = 8 } = req.query;
-            const books = yield db.Book.aggregate([
+            const books = yield models_1.default.Book.aggregate([
                 {
                     $project: {
                         title: 1,
                         caption: 1,
+                        sinopsis: 1,
+                        designer: 1,
+                        translator: 1,
                         price: 1,
                         stock: 1,
                         authorId: 1,
                         createdAt: 1,
+                        techData: 1,
+                        images: 1,
+                        colors: 1,
                     },
                 },
                 {
@@ -34,7 +43,7 @@ function getAll(req, res, next) {
                 // { $limit: limit },
                 // { $skip: page * limit },
             ]);
-            yield db.Book.populate(books, {
+            yield models_1.default.Book.populate(books, {
                 path: "authorId",
                 option: { select: "firstName lastName" },
             });
@@ -52,7 +61,7 @@ function getById(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const { id: bookId } = req.params;
-            const book = yield db.Book.findOne({ _id: bookId }, {
+            const book = yield models_1.default.Book.findOne({ _id: bookId }, {
                 title: 1,
                 caption: 1,
                 sinopsis: 1,

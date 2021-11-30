@@ -35,7 +35,7 @@ function getSeedBooks() {
                 price: 24.9,
                 stock: 100,
                 authorId: gloriaFuertesId,
-                techdata: {
+                techData: {
                     releaseYear: 2021,
                     pagesNumber: 448,
                     size: "16 x 23",
@@ -66,7 +66,7 @@ function getSeedBooks() {
                 price: 19.0,
                 stock: 100,
                 authorId: carloPadialId,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 272,
                     size: "14 x 21",
@@ -94,7 +94,7 @@ function getSeedBooks() {
                 price: 16.0,
                 stock: 100,
                 authorId: florenceParryId,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 80,
                     size: "14 x 21",
@@ -116,7 +116,7 @@ function getSeedBooks() {
                 price: 19.0,
                 stock: 100,
                 authorId: trevorNoahId,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 336,
                     size: "14 x 21",
@@ -142,7 +142,7 @@ function getSeedBooks() {
                 price: 18.9,
                 stock: 100,
                 authorId: ianSvenoniusId,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 224,
                     size: "14 x 21",
@@ -167,7 +167,7 @@ function getSeedBooks() {
                 price: 23.0,
                 stock: 100,
                 authorId: alastairBonnett,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 336,
                     size: "14 x 21",
@@ -197,7 +197,7 @@ function getSeedBooks() {
                 price: 13.9,
                 stock: 100,
                 authorId: cristopheGalfardId,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 96,
                     size: "14 x 21",
@@ -221,7 +221,7 @@ function getSeedBooks() {
                 price: 17.9,
                 stock: 100,
                 authorId: gianniRodari,
-                techdata: {
+                techData: {
                     releaseYear: 2017,
                     pagesNumber: 200,
                     size: "14 x 21",
