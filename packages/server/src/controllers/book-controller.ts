@@ -40,7 +40,7 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
   }
 }
 
-async function getById(req, res, next) {
+async function getById(req: Request, res: Response, next: NextFunction) {
   try {
     const { id: bookId } = req.params;
 
@@ -66,7 +66,7 @@ async function getById(req, res, next) {
       })
       .lean();
 
-    res.status(200).send({ data: book });
+    res.status(200).send({ book });
   } catch (error: any) {
     res.status(500).send({
       error: error.message,

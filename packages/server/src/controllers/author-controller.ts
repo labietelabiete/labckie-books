@@ -46,31 +46,21 @@ async function getById(req: Request, res: Response, next: NextFunction) {
         bio: 1,
         picture: 1,
       },
-    )
-      .populate({
-        path: "userId",
-        options: { select: "firstName" },
-      })
-      .lean();
+    ).lean();
 
     const books = await db.Book.find(
-      { album: authorId },
+      { authorId: authorId },
       {
         title: 1,
         caption: 1,
-        sinopsis: 1,
-        designer: 1,
-        translator: 1,
-        price: 1,
-        stock: 1,
-        techData: 1,
         images: 1,
+        colors: 1,
       },
     );
 
     author.books = books;
 
-    res.status(200).send({ data: author });
+    res.status(200).send({ author });
   } catch (error) {
     res.status(500).send({
       error: error.message,

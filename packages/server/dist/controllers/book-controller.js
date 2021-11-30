@@ -74,7 +74,7 @@ function getById(req, res, next) {
                 options: { select: "firstName lastName" },
             })
                 .lean();
-            res.status(200).send({ data: book });
+            res.status(200).send({ book });
         }
         catch (error) {
             res.status(500).send({
