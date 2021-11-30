@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Author = void 0;
-const mongoose = require("mongoose");
-const { Schema } = require("mongoose");
+// const mongoose = require("mongoose");
+// const { Schema } = require("mongoose");
+const mongoose_1 = require("mongoose");
+// import { validator } from "validator";
 const validator = require("validator");
-const authorSchema = new Schema({
+const authorSchema = new mongoose_1.Schema({
     firstName: {
         type: String,
         trim: true,
@@ -22,7 +24,6 @@ const authorSchema = new Schema({
     },
     birthYear: {
         type: Number,
-        default: 1992,
         required: [true, "Birth year is required"],
     },
     bio: {
@@ -43,6 +44,6 @@ const authorSchema = new Schema({
     strict: false,
     timestamps: true,
 });
-const Author = mongoose.model("author", authorSchema);
+const Author = (0, mongoose_1.model)("author", authorSchema);
 exports.Author = Author;
 //# sourceMappingURL=author-model.js.map

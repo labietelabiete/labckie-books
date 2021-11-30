@@ -1,8 +1,12 @@
-const mongoose = require("mongoose");
-const { Schema } = require("mongoose");
+// const mongoose = require("mongoose");
+// const { Schema } = require("mongoose");
+import { Schema, model } from "mongoose";
+// import { validator } from "validator";
 const validator = require("validator");
 
-const authorSchema = new Schema(
+import { Author } from "./../utils/types";
+
+const authorSchema = new Schema<Author>(
   {
     firstName: {
       type: String,
@@ -21,7 +25,6 @@ const authorSchema = new Schema(
     },
     birthYear: {
       type: Number,
-      default: 1992,
       required: [true, "Birth year is required"],
     },
     bio: {
@@ -45,6 +48,6 @@ const authorSchema = new Schema(
   },
 );
 
-const Author = mongoose.model("author", authorSchema);
+const Author = model<Author>("author", authorSchema);
 
 export { Author };

@@ -1,11 +1,12 @@
 import db from "../models";
 import { Request, Response, NextFunction } from "express";
+import { Book } from "./../utils/types";
 
 async function getAll(req: Request, res: Response, next: NextFunction) {
   try {
     // const { page = 0, limit = 8 } = req.query;
 
-    const books = await db.Book.aggregate([
+    const books: Book[] = await db.Book.aggregate([
       {
         $project: {
           title: 1,
@@ -44,7 +45,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
   try {
     const { id: bookId } = req.params;
 
-    const book = await db.Book.findOne(
+    const book: Book = await db.Book.findOne(
       { _id: bookId },
       {
         title: 1,

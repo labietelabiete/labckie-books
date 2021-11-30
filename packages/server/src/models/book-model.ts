@@ -1,8 +1,11 @@
-const mongoose = require("mongoose");
-const { Schema } = require("mongoose");
+// const mongoose = require("mongoose");
+// const { Schema } = require("mongoose");
+import { Schema, model } from "mongoose";
+// import { validator } from "validator";
 const validator = require("validator");
+import { Book } from "./../utils/types";
 
-const bookSchema = new Schema(
+const bookSchema = new Schema<Book>(
   {
     title: {
       type: String,
@@ -37,7 +40,7 @@ const bookSchema = new Schema(
     },
 
     authorId: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "author",
       required: [true, "Author Id is required"],
     },
@@ -77,6 +80,6 @@ const bookSchema = new Schema(
   },
 );
 
-const Book = mongoose.model("book", bookSchema);
+const Book = model<Book>("book", bookSchema);
 
 export { Book };

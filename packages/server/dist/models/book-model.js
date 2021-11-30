@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Book = void 0;
-const mongoose = require("mongoose");
-const { Schema } = require("mongoose");
+// const mongoose = require("mongoose");
+// const { Schema } = require("mongoose");
+const mongoose_1 = require("mongoose");
+// import { validator } from "validator";
 const validator = require("validator");
-const bookSchema = new Schema({
+const bookSchema = new mongoose_1.Schema({
     title: {
         type: String,
         trim: true,
@@ -35,7 +37,7 @@ const bookSchema = new Schema({
         required: [true, "Stock is required"],
     },
     authorId: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose_1.Schema.Types.ObjectId,
         ref: "author",
         required: [true, "Author Id is required"],
     },
@@ -72,6 +74,6 @@ const bookSchema = new Schema({
 }, {
     timestamps: true,
 });
-const Book = mongoose.model("book", bookSchema);
+const Book = (0, mongoose_1.model)("book", bookSchema);
 exports.Book = Book;
 //# sourceMappingURL=book-model.js.map

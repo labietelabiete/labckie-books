@@ -1,11 +1,13 @@
 import db from "../models";
 import { Request, Response, NextFunction } from "express";
+// import { Schema } from "mongoose";
+import { Author, Book } from "./../utils/types";
 
 async function getAll(req: Request, res: Response, next: NextFunction) {
   try {
     // const { page = 0, limit = 8 } = req.query;
 
-    const authors = await db.Author.aggregate([
+    const authors: Author[] = await db.Author.aggregate([
       {
         $project: {
           firstName: 1,
@@ -36,7 +38,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
   try {
     const { id: authorId } = req.params;
 
-    const author = await db.Author.findOne(
+    const author: Author = await db.Author.findOne(
       { _id: authorId },
       {
         firstName: 1,
@@ -48,7 +50,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
       },
     ).lean();
 
-    const books = await db.Book.find(
+    const books: Book[] = await db.Book.find(
       { authorId: authorId },
       {
         title: 1,
@@ -61,7 +63,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
     author.books = books;
 
     res.status(200).send({ author });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send({
       error: error.message,
     });
