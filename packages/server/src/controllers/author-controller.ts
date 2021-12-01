@@ -1,11 +1,13 @@
 import db from "../models";
 import { Request, Response, NextFunction } from "express";
-// import { Schema } from "mongoose";
 import { Author, Book } from "./../utils/types";
 
 async function getAll(req: Request, res: Response, next: NextFunction) {
   try {
     // const { page = 0, limit = 8 } = req.query;
+
+    // const { page = 0 }: number = parseInt(req.query.page);
+    // const { limit = 6 }: number = parseInt(req.query.page);
 
     const authors: Author[] = await db.Author.aggregate([
       {
@@ -21,8 +23,8 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
           createdAt: -1,
         },
       },
-      // { $limit: parseInt(limit) },
-      // { $skip: parseInt(page) * parseInt(limit) },
+      // { $limit: limit },
+      // { $skip: page * limit },
     ]);
 
     res.status(200).send({ authors });

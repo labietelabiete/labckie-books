@@ -8,16 +8,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.searchController = void 0;
-const db = require("../models");
+const models_1 = __importDefault(require("../models"));
 function searchBooks(req, res, next) {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const searchText = (_a = req.query) === null || _a === void 0 ? void 0 : _a.q;
             const { limit = 8 } = req.query;
-            const books = yield db.Book.find({
+            const books = yield models_1.default.Book.find({
                 $or: [
                     { title: { $regex: searchText, $options: "i" } },
                     { caption: { $regex: searchText, $options: "i" } },
@@ -34,9 +37,7 @@ function searchBooks(req, res, next) {
                     createdAt: -1,
                 },
             }).limit(limit);
-            return res
-                .status(200)
-                .send({ message: "Successfully searched", books: books });
+            return res.status(200).send({ message: "Successfully searched", books });
         }
         catch (error) {
             res.status(500).send({
@@ -52,24 +53,24 @@ function searchAuthors(req, res, next) {
         try {
             const searchText = (_a = req.query) === null || _a === void 0 ? void 0 : _a.q;
             const { limit = 8 } = req.query;
-            const authors = yield db.Author.find({
+            const authors = yield models_1.default.Author.find({
                 $or: [
-                    { firstName: { $regex: searchText, $options: "i" } },
-                    { lastName: { $regex: searchText, $options: "i" } },
+                    { title: { $regex: searchText, $options: "i" } },
+                    { caption: { $regex: searchText, $options: "i" } },
                 ],
             }, {
                 firstName: 1,
                 lastName: 1,
                 picture: 1,
                 createdAt: 1,
-            }, {
-                $sort: {
-                    createdAt: -1,
-                },
-            }).limit(limit);
-            return res
-                .status(200)
-                .send({ message: "Successfully searched", authors: authors });
+            });
+            // {
+            //   $sort: {
+            //     createdAt: -1,
+            //   },
+            // },
+            // ).limit(limit);
+            return res.status(200).send({ message: "Successfully searched", authors });
         }
         catch (error) {
             res.status(500).send({

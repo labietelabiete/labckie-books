@@ -18,6 +18,8 @@ function getAll(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // const { page = 0, limit = 8 } = req.query;
+            // const { page = 0 }: number = parseInt(req.query.page);
+            // const { limit = 6 }: number = parseInt(req.query.page);
             const authors = yield models_1.default.Author.aggregate([
                 {
                     $project: {
@@ -32,8 +34,8 @@ function getAll(req, res, next) {
                         createdAt: -1,
                     },
                 },
-                // { $limit: parseInt(limit) },
-                // { $skip: parseInt(page) * parseInt(limit) },
+                // { $limit: limit },
+                // { $skip: page * limit },
             ]);
             res.status(200).send({ authors });
         }

@@ -18,6 +18,8 @@ function getAll(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // const { page = 0, limit = 8 } = req.query;
+            // const { page = 0 }: number = parseInt(req.query.page);
+            // const { limit = 6 }: number = parseInt(req.query.page);
             const books = yield models_1.default.Book.aggregate([
                 {
                     $project: {

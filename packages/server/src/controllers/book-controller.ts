@@ -6,6 +6,9 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
   try {
     // const { page = 0, limit = 8 } = req.query;
 
+    // const { page = 0 }: number = parseInt(req.query.page);
+    // const { limit = 6 }: number = parseInt(req.query.page);
+
     const books: Book[] = await db.Book.aggregate([
       {
         $project: {
