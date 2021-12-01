@@ -1,25 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { PUBLIC } from "./constants/routes";
+
+import Home from "./pages/Home";
+import Book from "./pages/Book";
+import Author from "./pages/Author";
+
 import "./App.css";
 
-function App() {
+function App(): React.ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-xl">
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={`${PUBLIC.AUTHOR}/:id`} element={<Author />} />
+        <Route path={`${PUBLIC.BOOK}/:id`} element={<Book />} />
+        <Route path={PUBLIC.HOME} element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
