@@ -13,7 +13,7 @@ export async function getAllBooks(
   limit: number = 8,
   api: any = makeBookApi()
 ) {
-  return api.get(`/popular?page=${page}&limit=${limit}`);
+  return api.get(`/?page=${page}&limit=${limit}`);
 }
 
 export async function getBookById(id: string | null, api: any = makeBookApi()) {
