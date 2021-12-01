@@ -7,6 +7,13 @@ module.exports = {
     extend: {
       colors: {
         whitePrimary: "#F5F5F5",
+        greyPrimary: "#747474",
+        redSecondary: "#DC136C",
+        salmonSecondary: "#ED6A5A",
+        blueSecondary: "#5CA4A9",
+      },
+      fontFamily: {
+        anton: ["Anton", "sans-serif"],
       },
     },
   },

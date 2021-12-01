@@ -26,7 +26,7 @@ interface TechData {
 
 interface Images {
   main: string;
-  others?: string[];
+  other?: string[];
 }
 
 interface BookAuthor {
