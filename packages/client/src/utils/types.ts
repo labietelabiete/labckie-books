@@ -26,7 +26,7 @@ interface TechData {
 
 interface Images {
   main: string;
-  others?: [string];
+  others?: string[];
 }
 
 interface BookAuthor {
@@ -35,7 +35,7 @@ interface BookAuthor {
   lastName: string;
   country: string;
   birthYear: number;
-  bio: [string];
+  bio: string[];
   picture: string;
   books?: any;
 }
@@ -46,7 +46,7 @@ export interface BookCardProps {
   caption?: string;
   price: number;
   images: Images;
-  colors: [string];
+  colors: string[];
   authorId: BookAuthor;
 }
 
@@ -62,5 +62,5 @@ export interface Book {
   authorId: BookAuthor;
   techData: TechData;
   images: Images;
-  colors: [string];
+  colors: string[];
 }
