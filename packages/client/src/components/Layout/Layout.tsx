@@ -11,10 +11,10 @@ export default function Layout({
   children,
 }: LayoutProps): React.ReactElement {
   return (
-    <>
+    <div className="bg-whitePrimary min-h-screen">
       <Header />
       <Main>{children}</Main>
       <Footer />
-    </>
+    </div>
   );
 }

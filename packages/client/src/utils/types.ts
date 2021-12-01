@@ -40,7 +40,7 @@ interface BookAuthor {
   books?: any;
 }
 
-export interface BookCard {
+export interface BookCardProps {
   _id: string;
   title: string;
   caption?: string;
