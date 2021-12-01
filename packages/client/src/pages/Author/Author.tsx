@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Author() {
-  return <div></div>;
+  return <div>Author</div>;
 }
