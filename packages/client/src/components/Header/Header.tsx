@@ -8,7 +8,7 @@ import Cart from "./../Cart";
 
 import logo from "./../../assets/images/logo.png";
 
-export default function Header() {
+export default function Header(): React.ReactElement {
   return (
     <>
       <Link to={PUBLIC.HOME}>
@@ -24,7 +24,7 @@ export default function Header() {
         <SearchBar />
       </div>
       <Link to={PUBLIC.SUMMARY}>
-        <div className="fixed top-8 right-24">
+        <div className="fixed top-6 right-24">
           <Cart />
         </div>
       </Link>

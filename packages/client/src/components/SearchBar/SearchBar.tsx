@@ -23,7 +23,7 @@ export default function SearchBar(): React.ReactElement {
 
   return (
     <div>
-      <form onSubmit={formik.handleSubmit} className="flex">
+      <form onSubmit={formik.handleSubmit} className="flex font-mulish">
         <input
           type="text"
           className="bg-black p-3 w-80 rounded-xl border-2 border-white text-white shadow-2xl"
