@@ -60,7 +60,7 @@ export default function Book(): React.ReactElement {
   return (
     <Layout docTitle={book?.title}>
       {loading ? (
-        <div className="min-h-screen flex items-center ">
+        <div className="flex items-center ">
           <FadeLoader color={"black"} loading={loading} css={override} />
         </div>
       ) : (

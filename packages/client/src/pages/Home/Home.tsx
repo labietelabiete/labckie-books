@@ -35,7 +35,7 @@ export default function Home(): React.ReactElement {
   return (
     <Layout docTitle="Home">
       {loading ? (
-        <div className="min-h-screen flex items-center ">
+        <div className="flex items-center ">
           <FadeLoader color={"black"} loading={loading} css={override} />
         </div>
       ) : (

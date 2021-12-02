@@ -11,9 +11,9 @@ export default function Layout({
   children,
 }: LayoutProps): React.ReactElement {
   return (
-    <div className="bg-whitePrimary min-h-screen">
+    <div className="bg-whitePrimary flex flex-col justify-between min-h-screen">
       <Header />
-      <Main >{children}</Main>
+      <Main>{children}</Main>
       <Footer />
     </div>
   );
