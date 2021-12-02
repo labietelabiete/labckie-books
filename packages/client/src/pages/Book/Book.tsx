@@ -15,7 +15,7 @@ import { css } from "@emotion/react";
 export default function Book(): React.ReactElement {
   const [loading, setLoading] = useState<boolean>(false);
   const [book, setBook] = useState<BookProps>();
-  const [nItems, setNItems] = useState<number>(0);
+  // const [nItems, setNItems] = useState<number>(0);
 
   const override = css`
     display: block;
@@ -33,13 +33,13 @@ export default function Book(): React.ReactElement {
     backgroundColor: `${book?.colors[2]}`,
   };
 
-  const handleMinusItem = () => {
-    if (nItems > 0) setNItems(nItems - 1);
-  };
+  // const handleMinusItem = () => {
+  //   if (nItems > 0) setNItems(nItems - 1);
+  // };
 
-  const handlePlusItem = () => {
-    setNItems(nItems + 1);
-  };
+  // const handlePlusItem = () => {
+  //   setNItems(nItems + 1);
+  // };
 
   const { id } = useMatch(`${PUBLIC.BOOK}/:id`)!.params;
 
@@ -64,7 +64,7 @@ export default function Book(): React.ReactElement {
           <FadeLoader color={"black"} loading={loading} css={override} />
         </div>
       ) : (
-        <div className="flex justify-center mt-28 mx-36">
+        <div className="flex justify-center mt-28 mx-24">
           <div className="mr-12">
             <img className="" src={book?.images.main} alt={book?.title} />
           </div>
@@ -74,18 +74,20 @@ export default function Book(): React.ReactElement {
                 {book?.authorId.firstName} {book?.authorId.lastName}
               </h3>
             </Link>
-            <h2 className="text-5xl font-bold font-oswald">{book?.title}</h2>
+            <h2 className="mt-2 text-5xl font-bold font-oswald">
+              {book?.title}
+            </h2>
             <div className="w-100 mt-6 flex">
               <div className="h-1 w-4/12" style={firstColor}></div>
               <div className="h-1 w-4/12" style={secondColor}></div>
               <div className="h-1 w-4/12" style={thirdColor}></div>
             </div>
-            <div className="mt-5 text-sm text-greyPrimary font-mulish">
+            <div className="mt-6 text-sm text-greyPrimary font-mulish">
               {book?.sinopsis.map((item: string) => (
                 <p key={item}>{item}</p>
               ))}
             </div>
-            <div className="flex items-center mt-6">
+            {/* <div className="flex items-center mt-6">
               <button
                 onClick={handleMinusItem}
                 className="rounded-fully px-2 my-1 text-xl text-white"
@@ -101,8 +103,16 @@ export default function Book(): React.ReactElement {
               >
                 +
               </button>
+            </div> */}
+            <div className="flex items-center justify-between mt-8">
+              <p className="text-3xl font-bold font-oswald">{book?.price}€</p>
+              <button
+                style={firstColor}
+                className="p-2 px-6 text-white rounded-lg hover:opacity-90 font-mulish"
+              >
+                Añadir al carrito
+              </button>
             </div>
-            <div></div>
           </div>
         </div>
       )}
