@@ -81,7 +81,7 @@ export function getSeedAuthors() {
     {
       firstName: "Gianni",
       lastName: "Rodari",
-      country: "Omegna, Italy",
+      country: "Omegna, Italia",
       birthYear: 1920,
       bio: [
         "Gianni Rodari nació en el Piamonte italiano el 23 de octubre de 1920 y murió el 14 de diciembre de 1980 en Roma. Fue niño, periodista, maestro, pedagogo de la fantasía, militante comunista y revolucionario de la literatura infantil. Y de la literatura, a secas. Porque aunque en 1970 recibió el premio Hans Christian Andersen, también llamado el Pequeño Nobel, todo el mundo sabe que, por fortuna, los lectores de Rodari no tienen edad y cada día crecen en número. Hijo de panaderos, supo que la creatividad puede aprenderse e incluso enseñarse, que la imaginación debe ocupar un lugar en la educación.",
@@ -90,6 +90,98 @@ export function getSeedAuthors() {
       ],
       picture:
         "https://blackiebooks.org/wp-content/uploads/2016/12/Gianni-Rodari.jpg",
+    },
+    ////////////////////////////////////////////////////////////////
+
+    {
+      firstName: "William",
+      lastName: "Irwin",
+      country: "Chicago, EEUU",
+      birthYear: 1938,
+      bio: [
+        "William Irwin es profesor de filosofía en el King’s College y autor, entre otros títulos, de Welcome to the Desert of the Real (2002) y The Matrix and Philosophy (2004).",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2016/12/William-Irwin-Mark-T.-Conard-Aeon-J.-Skob.jpg",
+    },
+    {
+      firstName: "Carlota",
+      lastName: "Juncosa",
+      country: "Barcelona",
+      birthYear: 1982,
+      bio: [
+        "Hola, soy Carlota Juncosa y Blackie me ha pedido que cuente un poco mi vida.",
+        "Dibujo desde que tengo memoria y de pequeña creía que podía dibujar a gente que conocería en un futuro.",
+        "En 2002 terminé el bachillerato artístico y empecé la carrera de diseño, así como a pintar graffitis.",
+        "En 2007 acabé Diseño y me dio mucha claustrofobia el hecho de tener que encerrarme en un estudio de diseño a trabajar. En aquel momento creo que pensaba que era lo peor que me podía pasar.",
+        "En 2008 empecé a estudiar Filosofía y dejé de dibujar. Lo combiné con trabajos de todo tipo que no me gustaban nada y de los que me acababan echando por vaga (cosa de la que no estoy orgullosa).",
+        "En 2010 las cosas empezaron a ir mejor y conseguí ser becaria de la universidad, pero lo dejé para trabajar de diseñadora gráfica a media jornada y poder combinar más cómodamente mi trabajo con las clases. También me abrí un blog para dibujar y alquilé un taller para comprometerme conmigo misma.",
+        "En 2012 empecé a hacer fanzines, colaboraciones, expos y comencé a trabajar en la biografía de Carmen. Cuando todo esto empezó yo seguía estudiando Filosofía y mi vida emocional era un caos ingobernable. Era de esas personas que son sospechosas porque siempre tienen novio. De ésas que no saben estar solas.",
+        "Así que como conmigo todo era bastante 2+2=4, leía bastantes libros de autoayuda (la mayoría bastante infumables) e iba a una psicóloga que me ayudó mucho.",
+        "Uno de esos libros era El camino del artista, que de vez en cuando vuelvo a consultar porque está muy bien. Ese libro explicaba lo de las sincronías, que tenía que estar atenta y seguir las señales que se me presentaban para no bloquear mi flujo creativo. Así que estuve muy atenta a todas las coincidencias e intuiciones que tenía. Cuando me enteré de que Carmen y mi novio nacieron el mismo día lo viví como una especie de revelación apoteósica que me ayudó a tener el suficiente empuje y determinación para acabar el proyecto y creer en él, aunque tuve muchos momentos de dudas. Me da la risa porque quise utilizar con Carmen el mismo método que usaba un psicólogo conmigo: quedarme callada y dejar que lo que se tuviera que manifestar, se manifestara. A veces funcionó y otras veces no me lo pareció.",
+        "Así que ya veis, ése es mi secreto. Tonterías más gordas se han visto, ¿no?",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2017/05/Carlota-Juncosa_bio.jpg",
+    },
+    {
+      firstName: "Comité",
+      lastName: "Blackie Books",
+      country: "Barcelona",
+      birthYear: 2009,
+      bio: [
+        "El Comité Blackie Books es algo así como una tropa de superhéroes, pero con la ropa interior por debajo de los pantalones. Un puñado de valientes que dibujan, escriben y conspiran contenidos exclusivos para Blackie Books. Están por todas partes, entre nosotros.",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2016/11/BBComite-Big.png",
+    },
+    {
+      firstName: "Daniel",
+      lastName: "Tammet",
+      country: "Londres, Reino Unido",
+      birthYear: 1979,
+      bio: [
+        "Daniel Tammet nació el 31 de enero de 1979. A él le gusta decir que 31, 19 y 79 son números primos, pero eso es porque considera que los números primos son poéticos. Sabe hablar muchos idiomas (diez, incluyendo el islandés, el esperanto y uno de creación propia) y le encanta la literatura. Especialmente, la poesía. Y, en concreto, La poesía de los números.",
+        "Para este matemático prodigioso cada número hasta la cifra de 10.000 tiene su propia forma, color, textura y emoción. Números que brillan. Contar es para él como ver una película o adentrarse en un bosque tropical. Quizás por eso, cuando era un muchacho hostigado por sus compañeros en un barrio al este de Londres, no jugaba al fútbol en el patio del colegio, sino que se ponía delante de un árbol y contaba las hojas de la copa. De hecho, es el mayor de nueve hermanos y todos ellos eran mejores con la pelota que él, aunque le querían igual porque desde pequeño les explicaba historias. Es posible, también, que gracias a esta capacidad batiera en 2004 un récord europeo al recitar 22.514 decimales del número pi, el más enigmático de todos, en cinco horas.",
+        "Lo hizo, en realidad, con el objetivo de recaudar fondos para dar visibilidad a las personas que sufren epilepsia. Su padre murió de esa enfermedad, así que cuando él sufrió el primer ataque su madre temió lo peor. Sin embargo, esa crisis desató otro efecto: se le acabaría diagnosticando Asperger, pero solo un 1% de los diagnosticados con este trastorno autista padecen también el Síndrome del Sabio (o son savants), caracterizado por una memoria prodigiosa, unas habilidades con las artes innatas, una capacidad de cálculo casi paranormal. Él, además, es sinestésico, así que puede escuchar colores o palpar sabores. La clave, sin embargo, es que además de poseer todas estas habilidades asombrosas, es de los pocos que saben explicarlas. Porque escribe. Y escribe muy bien.",
+        "Todo esto también tiene otras consecuencias. Tammet está anclado en las rutinas: debe tomar el té cada día a una hora exacta, salpicar su cara cinco veces cuando se despierta y, antes de salir de casa, contar los botones de toda la ropa que viste. Explicó todo eso y mucho más en Nacido en un día azul (2006), las memorias sobre el día a día de un sabio con autismo, nombradas mejor libro del año por la American Library Association. De hecho, su rasgo más especial no es ser un sabio, sino saber explicar cómo funciona su cerebro. Y el nuestro. El de todos. La conquista del cerebro, su nuevo libro, va entre otras cosas de esto. Fue uno de los grandes best sellers de 2009 en Francia, así que se mudó a París, donde vive como escritor desde entonces. Un matemático que vive de las letras. A Tammet le costó entender qué sucedía en su cabeza. Por eso era tímido, aunque le gustaba arrasar en los quizs en los que concursaba con sus amigos. Pero en 2005 el Channel Five británico le dedicó el documental «The Boy with the Incredible Brain», y durante la grabación conoció a alguien que le daría la confianza que le faltaba: Kim Peek, la persona en la que se basó el personaje de Dustin Hoffman en Rain Man. Ese que recitaba números, se golpeaba a cabeza y para el que una lavadora de color era tan fascinante como la mejor película jamás filmada. Aunque se ha convertido en un autor de éxito y en una celebridad de la divulgación científica, Tammet aún se pone nervioso a menudo. Tiene un truco. Lo hace desde que era muy pequeño. Para llevarlo a cabo debe cerrar los ojos. Entonces, multiplica dos por dos, y el resultado por dos más, y esa cifra otra vez por dos… Y a medida que lo hace en su mente aparecen bengalas, chispas, espirales de neón. Hasta que, de repente, puede ver con claridad todo un cielo de fuegos artificiales. Eso lo tranquiliza y le parece bonito. Le gustan la justicia y la precisión, pero siempre dice que en las matemáticas, como en la literatura y en la vida, la belleza es lo más importante.",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2016/11/Daniel-Tammet_%C2%A9-de-la-fotografi%CC%81a-del-autor-Je%CC%81rome-Tabet.jpg",
+    },
+    {
+      firstName: "David",
+      lastName: "Sedaris",
+      country: "Nueva York, EEUU",
+      birthYear: 1956,
+      bio: [
+        "David Sedaris es escritor y humorista de loca y muy precisa atención al detalle. Creció junto a su madre, su padre y sus cinco hermanos en la zona suburbana de Raleigh (Carolina del Norte) y ha escrito ensayos autobiográficos contando su vida con ellas y sus posteriores andanzas en Chicago, Londres, Normandía y otros lugares. Ha publicado diez antologías reuniendo sus numerosos textos y un volumen con una selección de páginas de sus diarios de entre 1977 y 2002. Calypso, este libro que tienes ahora entre las manos, es su obra más reciente. En su juventud pasó unas Navidades trabajando disfrazado de elfo de Papá Noel en los grandes almacenes Macy’s de Nueva York y aquello todavía no se le va de la cabeza. En la actualidad vive en el condado de West Sussex (Inglaterra) junto al pintor Hugh Hamrick —su pareja desde hace casi treinta años—, un erizo llamado Galveston y dos ranas: Lane y Courtney. Hace frío, pero están todos bien.",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2020/02/David-Sedaris_retrat.jpg",
+    },
+    {
+      firstName: "Hadley",
+      lastName: "Freeman",
+      country: "Nueva York, EEUU",
+      birthYear: 1978,
+      bio: [
+        "Hadley Freeman fue niña en Nueva York y adolescente en Londres. Hasta los once años creció en una familia judía en la Gran Manzana, donde empezó a devorar sus primeras películas favoritas y a identificarse con sus personajes más especiales. No solo estudió en Oxford, sino que editó Cherwell, el prestigioso periódico de la Universidad donde han escrito firmas como Graham Greene o Evelyn Waugh, entre otros. Desde el año 2000 escribe la exitosísima columna «Ask Hadley» en el diario The Guardian, donde se ha convertido en un referente del nuevo feminismo gracias a su análisis de las contradicciones de la industria de la moda y de los modelos que genera. También escribe para el Vogue estadounidense. Ha firmado varios libros, bestsellers en el mercado anglosajón, entre los que destaca The Time of My Life, que ahora edita Blackie Books. El sentido del humor es su principal arma, aunque jamás evita meterse en líos en su Twitter para defender aquello en lo que cree (en 2013 protagonizó una sonada polémica por las amenazas de bomba que recibió por parte de enconados machistas). No en vano su película favorita es Cazafantasmas.",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2016/11/Daniel-Tammet_%C2%A9-de-la-fotografi%CC%81a-del-autor-Je%CC%81rome-Tabet.jpg",
+    },
+
+    {
+      firstName: "Jean-Jacques",
+      lastName: "Sempé",
+      country: "Burdeos, France",
+      birthYear: 1932,
+      bio: [
+        "Jean-Jacques Sempé (o sencillamente Sempé, como firma su obra) se trasladó a un París que siempre le había fascinado con dieciocho años, donde trabajó como repartidor de vino. No obstante, sus ilustraciones estaban llamadas a colonizar las bibliotecas infantiles de todo el mundo, y no tardó en aparcar la bicicleta que usaba para los repartos. Sus primeros pasos como ilustrador vinieron de la mano de revistas y periódicos franceses como Paris Match y L’Express, que encontraron en sus caricaturas el vehículo perfecto para la crítica y la sátira social. Sus acuarelas, revestidas de lirismo y aparente sencillez, terminaron por traspasar las fronteras del periodismo galo para recalar en lo literario, y hoy cuenta con más de cuarenta libros a sus espaldas. Mención especial merecen Catherine (Blackie Books, 2014), que firmó con el premio Nobel Patrick Modiano, y las desternillantes peripecias de El Pequeño Nicolás, el personaje que creó junto a René Goscinny y que ha sido traducido a más de treinta idiomas. Pero Sempé es un dibujante maravilloso que también escribe historias maravillosas. Como esta, Marcelín, sobre un niño que no puede evitar sonrojarse. Tal vez le pase lo mismo a su creador, quién sabe, pues en una ocasión aseguró: «Dibujo mis propias debilidades».",
+      ],
+      picture:
+        "https://blackiebooks.org/wp-content/uploads/2016/11/Jean-Jacques-Sempe%CC%81-Foto-Catherine-He%CC%81lie-2.jpg",
     },
   ];
 }

@@ -23,7 +23,14 @@ function getSeedBooks() {
         const { _id: ianSvenoniusId } = yield models_1.default.Author.findOne({ firstName: "Ian", lastName: "Svenonius" }, { _id: 1 }).lean();
         const { _id: alastairBonnett } = yield models_1.default.Author.findOne({ firstName: "Alastair", lastName: "Bonnett" }, { _id: 1 }).lean();
         const { _id: cristopheGalfardId } = yield models_1.default.Author.findOne({ firstName: "Christophe", lastName: "Galfard" }, { _id: 1 }).lean();
-        const { _id: gianniRodari } = yield models_1.default.Author.findOne({ firstName: "Gianni", lastName: "Rodari" }, { _id: 1 }).lean();
+        const { _id: gianniRodariId } = yield models_1.default.Author.findOne({ firstName: "Gianni", lastName: "Rodari" }, { _id: 1 }).lean();
+        const { _id: williamIrwinId } = yield models_1.default.Author.findOne({ firstName: "William", lastName: "Irwin" }, { _id: 1 }).lean();
+        const { _id: carlotaJuncosaId } = yield models_1.default.Author.findOne({ firstName: "Carlota", lastName: "Juncosa" }, { _id: 1 }).lean();
+        const { _id: comiteId } = yield models_1.default.Author.findOne({ firstName: "Comité", lastName: "Blackie Books" }, { _id: 1 }).lean();
+        const { _id: danielTammetId } = yield models_1.default.Author.findOne({ firstName: "Daniel", lastName: "Tammet" }, { _id: 1 }).lean();
+        const { _id: davidSedarisId } = yield models_1.default.Author.findOne({ firstName: "David", lastName: "Sedaris" }, { _id: 1 }).lean();
+        const { _id: hadleyFreemanId } = yield models_1.default.Author.findOne({ firstName: "Hadley", lastName: "Freeman" }, { _id: 1 }).lean();
+        const { _id: jeanSempeId } = yield models_1.default.Author.findOne({ firstName: "Jean-Jacques", lastName: "Sempé" }, { _id: 1 }).lean();
         return [
             {
                 title: "El libro de Gloria Fuertes",
@@ -220,7 +227,7 @@ function getSeedBooks() {
                 ],
                 price: "17.90",
                 stock: 100,
-                authorId: gianniRodari,
+                authorId: gianniRodariId,
                 techData: {
                     releaseYear: 2017,
                     pagesNumber: 200,
@@ -235,6 +242,236 @@ function getSeedBooks() {
                     ],
                 },
                 colors: ["#08173F", "#DE4A4B", "#F0F7F8"],
+            },
+            ////////////////////////////////////////////////////////////////
+            {
+                title: "Los Simpson y la filosofía",
+                caption: "Cómo entender el mundo gracias a Homer y compañía",
+                sinopsis: [
+                    "¿Justificaría Nietzsche las gamberradas de Bart?",
+                    "¿Es Lisa una socrática insoportable?",
+                    "¿Puede Homer ser esencialmente virtuoso, pero ofrecer su familia a los extraterrestres para salvar el pellejo?",
+                    "¿Marge nos hace sentir como en casa porque es una madre y ama de casa machista?",
+                    "¿Podemos aprender algo sobre la felicidad gracias a las miserias del señor Burns?",
+                    "¿Puedes ser de izquierdas y mofarte de un pueblo como Springfield?",
+                    "Los Simpson y la filosofía no solo es un análisis sobre la filosofía en el último gran artefacto cultural, sino también una introducción divertida pero rigurosísima a la obra de pensadores como Aristóteles, Kant, Heidegger o Sartre, entre muchos otros.",
+                ],
+                price: "14.90",
+                stock: 100,
+                designer: "Felix Petruska",
+                translator: "Diana Hernández",
+                authorId: williamIrwinId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 408,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-17059-26-2",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2017/06/Los-Simpson-y-la-filosofia_nueva-ed_BB.jpg",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2017/06/9788417059262.jpg",
+                    ],
+                },
+                colors: ["#000405", "#F1D83D", "#F3F5F4"],
+            },
+            {
+                title: "Carmen de Mairena. Una biografía",
+                sinopsis: [
+                    "Carmen de Mairena es mucho más que aquello que sabemos de ella. Es una mujer que luchó para ser mujer. Mujer de barrio y de calle, estrella televisiva, amiga de amigos que la timan, emblema de la otra Barcelona, persona de carne y hueso que ríe (cada vez menos) y sufre (cada vez más).",
+                    "La joven artista Carlota Juncosa compartió casi un año con Carmen de Mairena. De esa extraña amistad surgió una biografía ilustrada, tan contradictoria y única como su protagonista",
+                ],
+                price: "19.90",
+                stock: 100,
+                authorId: carlotaJuncosaId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 224,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-17059-04-0",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2017/05/Carmen-de-Mairena_3D_BB.jpg",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2017/05/9788417059040.jpg",
+                    ],
+                },
+                colors: ["#D0030A", "#E1ADC4", "#000000"],
+            },
+            {
+                title: "Mierda de música",
+                caption: "Cómo entender el mundo gracias a Homer y compañía",
+                sinopsis: [
+                    "¿Justificaría Nietzsche las gamberradas de Bart?",
+                    "¿Es Lisa una socrática insoportable?",
+                    "¿Puede Homer ser esencialmente virtuoso, pero ofrecer su familia a los extraterrestres para salvar el pellejo?",
+                    "¿Marge nos hace sentir como en casa porque es una madre y ama de casa machista?",
+                    "¿Podemos aprender algo sobre la felicidad gracias a las miserias del señor Burns?",
+                    "¿Puedes ser de izquierdas y mofarte de un pueblo como Springfield?",
+                    "Los Simpson y la filosofía no solo es un análisis sobre la filosofía en el último gran artefacto cultural, sino también una introducción divertida pero rigurosísima a la obra de pensadores como Aristóteles, Kant, Heidegger o Sartre, entre muchos otros.",
+                ],
+                price: "16.90",
+                stock: 100,
+                authorId: comiteId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 144,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-16290-95-6",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2017/04/Mierda-de-musica_BB_web.jpg",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2017/04/9788416290956.jpg",
+                    ],
+                },
+                colors: ["#002245", "#DDE1E2", "#000000"],
+            },
+            {
+                title: "La poesía de los números",
+                caption: "Cómo las matemáticas iluminan mi vida",
+                sinopsis: [
+                    "¿Justificaría Nietzsche las gamberradas de Bart?",
+                    "¿Es Lisa una socrática insoportable?",
+                    "¿Puede Homer ser esencialmente virtuoso, pero ofrecer su familia a los extraterrestres para salvar el pellejo?",
+                    "¿Marge nos hace sentir como en casa porque es una madre y ama de casa machista?",
+                    "¿Podemos aprender algo sobre la felicidad gracias a las miserias del señor Burns?",
+                    "¿Puedes ser de izquierdas y mofarte de un pueblo como Springfield?",
+                    "Los Simpson y la filosofía no solo es un análisis sobre la filosofía en el último gran artefacto cultural, sino también una introducción divertida pero rigurosísima a la obra de pensadores como Aristóteles, Kant, Heidegger o Sartre, entre muchos otros.",
+                ],
+                price: "19.90",
+                stock: 100,
+                designer: "Ignasi Font",
+                translator: "Pablo Álvarez Ellacuria",
+                authorId: danielTammetId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 288,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-16290-98-7",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2017/03/La-poesia-de-los-numeros_3D_alta.jpg",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2017/03/9788416290987.jpg",
+                    ],
+                },
+                colors: ["#020B14", "#0B4B67", "#E3BA14"],
+            },
+            {
+                title: "La conquista del cerebro",
+                caption: "Un viaje a los confines y secretos de la mente",
+                sinopsis: [
+                    "«Me llamo Daniel Tammet y puedo hacer todo esto gracias al síndrome del sabio, que me diagnosticaron por mis capacidades cognitivas extraordinarias. Pero no soy tan diferente a ti. Quiero ayudarte a conocer los secretos de tu cerebro y los avances de la ciencia en ese campo. A desarrollar la conciencia espacial, la intuición y la empatía. A abrazar nuevas formas de percepción y pensamiento creativo. A ir más allá de la complejidad y las limitaciones de lo que ves. Explicándote cómo funciona mi mente, intentaré que expandas los límites de la tuya. Es hora de emprender La conquista del cerebro.»",
+                ],
+                price: "19.90",
+                stock: 100,
+                designer: "Ignasi Font",
+                translator: "Ismael Attrache",
+                authorId: danielTammetId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 344,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-16290-60-4",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2017/03/LA-conquista-del-cerebro_3D_alta.png",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2017/03/9788416290604.jpg",
+                    ],
+                },
+                colors: ["#000000", "#8B5543", "#D07900"],
+            },
+            {
+                title: "Calypso",
+                sinopsis: [
+                    "Sedaris se va a la playa, en la costa de Carolina, para intentar desconectar de todo, pero no puede huir de sí mismo. Ni de su familia. Ni de su trabajo. Ni de su adicción a la pulserita que le cuenta los pasos. Ni del suicidio de su hermana. Ni de su padre de derechas. Ni de Donald Trump. ¿La única solución? Reírse de sí mismo y de sus miserias como catarsis necesaria para seguir viviendo.",
+                    "Según The Guardian, el diario británico más prestigioso, «David Sedaris es el rey indiscutible de la literatura humorística». Y Calypso es su obra definitiva, la que contiene toda su risa, toda su melancolía. Chistes escatológicos con una prosa digna de Dorothy Parker, animales acomplejados, fantasmas alcohólicos y toda la ternura del mundo.",
+                    "Un libro sobre ese instante en el que te das cuenta de que tu vida tiene mucho más pasado que futuro. Y echas la vista atrás, mientras sonríes.",
+                ],
+                price: "21.00",
+                stock: 100,
+                translator: "Jorge de Cascante",
+                authorId: davidSedarisId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 272,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-17552-95-4",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2020/02/Calypso_3D_web.png",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2020/02/9788417552954.jpg",
+                    ],
+                },
+                colors: ["#7F4732", "#000000", "#DCB26C"],
+            },
+            {
+                title: "The Time of My Life",
+                sinopsis: [
+                    "Dirty Dancing nos enseñó que sí, las mujeres abortan.",
+                    "La princesa prometida nos enseñó que el amor verdadero no es un cuento de hadas.",
+                    "Cazafantasmas nos enseñó que la amistad masculina no tiene por qué ser inmadura.",
+                    "La chica de rosa nos enseñó que la personalidad no depende del vestido que lleves.",
+                    "Todo en un día nos enseñó que siempre habrá clases sociales.",
+                    "Regreso al futuro nos enseñó que nuestros padres son tan complicados como nosotros.",
+                    "No sabíamos que las películas que nos cambiaron la vida también nos estaban preparando para las luchas de hoy. Un ensayo revelador.",
+                ],
+                price: "19.90",
+                stock: 100,
+                designer: "Percival Everett",
+                translator: "Zulema Couso",
+                authorId: hadleyFreemanId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 336,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-16290-76-5",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2016/11/The-Time-of-My-Life_3D_web.png",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2016/11/thetimeofmylife_1.jpg",
+                    ],
+                },
+                colors: ["#CE127D", "#1C110C", "#F2F1EB"],
+            },
+            {
+                title: "El taller de bicicletas",
+                caption: "O el secreto inconfesable de Raoul Taburin",
+                sinopsis: [
+                    "Todos guardamos un secreto y Raoul Taburin tiene uno inconfesable. Ha aprendido a disimularlo, pero el peso empieza a ser insoportable.",
+                    "Siempre se ha entregado en cuerpo y alma a su gran vocación. Si alguien hay que lo sepa todo de cambios de marchas, calapiés, rodamientos de bolas, piñones, cámaras y neumáticos, ese es Raoul Taburin, el dueño del taller de bicicletas del pequeño municipio francés de Saint-Céron. Su reputación es tal que, en toda la región, una bici no es una bici, sino una taburina.",
+                    "Pero Raoul Taburin no deja de pensar en su abrumador secreto… Y es que él, el mejor reparador de bicis del mundo, no sabe montar en bicicleta. Es absolutamente incapaz.",
+                    "Todos, en algún momento de nuestras vidas, necesitamos contarle nuestros secretos a alguien. Y cuando entra en el taller un misterioso fotógrafo, Raoul sabe que el momento se acerca. Y que nada volverá a ser igual.",
+                ],
+                price: "18.00",
+                stock: 100,
+                translator: "Miguel Azaola",
+                authorId: jeanSempeId,
+                techData: {
+                    releaseYear: 2017,
+                    pagesNumber: 104,
+                    size: "14 x 21",
+                    bindings: "Cartoné",
+                    ISBN: "978-84-17552-42-8",
+                },
+                images: {
+                    main: "https://blackiebooks.org/wp-content/uploads/2019/07/El-taller-de-bicicletas_3D_web.png",
+                    other: [
+                        "https://blackiebooks.org/wp-content/uploads/2019/06/9788417552428.jpg",
+                    ],
+                },
+                colors: ["#112679", "#E39A93", "#1A1A19"],
             },
         ];
     });
