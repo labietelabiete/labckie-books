@@ -17,6 +17,9 @@ module.exports = {
         oswald: ["Oswald", "sans-serif"],
         mulish: ["Mulish", "sans-serif"],
       },
+      borderRadius: {
+        fully: "100000000000px",
+      },
     },
   },
   variants: {

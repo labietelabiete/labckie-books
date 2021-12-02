@@ -15,6 +15,7 @@ import { css } from "@emotion/react";
 export default function Book(): React.ReactElement {
   const [loading, setLoading] = useState<boolean>(false);
   const [book, setBook] = useState<BookProps>();
+  const [nItems, setNItems] = useState<number>(0);
 
   const override = css`
     display: block;
@@ -24,18 +25,20 @@ export default function Book(): React.ReactElement {
 
   const firstColor = {
     backgroundColor: `${book?.colors[0]}`,
-    height: "3px",
-    width: "33%",
   };
   const secondColor = {
     backgroundColor: `${book?.colors[1]}`,
-    height: "3px",
-    width: "33%",
   };
   const thirdColor = {
     backgroundColor: `${book?.colors[2]}`,
-    height: "3px",
-    width: "33%",
+  };
+
+  const handleMinusItem = () => {
+    if (nItems > 0) setNItems(nItems - 1);
+  };
+
+  const handlePlusItem = () => {
+    setNItems(nItems + 1);
   };
 
   const { id } = useMatch(`${PUBLIC.BOOK}/:id`)!.params;
@@ -62,8 +65,6 @@ export default function Book(): React.ReactElement {
         </div>
       ) : (
         <div className="flex justify-center mt-28 mx-36">
-          {/* {book?.sinopsis[0]} */}
-          {/* {book?.images.others[0]} */}
           <div className="mr-12">
             <img className="" src={book?.images.main} alt={book?.title} />
           </div>
@@ -75,15 +76,33 @@ export default function Book(): React.ReactElement {
             </Link>
             <h2 className="text-5xl font-bold font-oswald">{book?.title}</h2>
             <div className="w-100 mt-6 flex">
-              <div style={firstColor}></div>
-              <div style={secondColor}></div>
-              <div style={thirdColor}></div>
+              <div className="h-1 w-4/12" style={firstColor}></div>
+              <div className="h-1 w-4/12" style={secondColor}></div>
+              <div className="h-1 w-4/12" style={thirdColor}></div>
             </div>
             <div className="mt-5 text-sm text-greyPrimary font-mulish">
               {book?.sinopsis.map((item: string) => (
                 <p key={item}>{item}</p>
               ))}
             </div>
+            <div className="flex items-center mt-6">
+              <button
+                onClick={handleMinusItem}
+                className="rounded-fully px-2 my-1 text-xl text-white"
+                style={firstColor}
+              >
+                -
+              </button>
+              <p className="mx-2 text-3xl font-oswald text-bold">{nItems}</p>
+              <button
+                onClick={handlePlusItem}
+                className="rounded-fully px-2 my-1 text-xl text-white"
+                style={firstColor}
+              >
+                +
+              </button>
+            </div>
+            <div></div>
           </div>
         </div>
       )}
