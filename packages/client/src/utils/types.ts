@@ -6,7 +6,7 @@ export interface OnlyChildren {
 }
 
 export interface LayoutProps extends OnlyChildren {
-  docTitle: string;
+  docTitle?: string;
 }
 
 // Redux
@@ -26,7 +26,7 @@ interface TechData {
 
 interface Images {
   main: string;
-  other?: string[];
+  others: string[];
 }
 
 interface BookAuthor {
@@ -50,13 +50,13 @@ export interface BookCardProps {
   authorId: BookAuthor;
 }
 
-export interface Book {
+export interface BookProps {
   _id: string;
   title: string;
-  caption?: string;
-  sinopsis?: [string];
-  designer?: string;
-  translator?: string;
+  caption: string;
+  sinopsis: string[];
+  designer: string;
+  translator: string;
   price: string;
   stock: number;
   authorId: BookAuthor;

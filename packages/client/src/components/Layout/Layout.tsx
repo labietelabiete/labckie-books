@@ -13,7 +13,7 @@ export default function Layout({
   return (
     <div className="bg-whitePrimary min-h-screen">
       <Header />
-      <Main>{children}</Main>
+      <Main >{children}</Main>
       <Footer />
     </div>
   );

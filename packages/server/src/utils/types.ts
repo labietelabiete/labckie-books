@@ -27,10 +27,10 @@ interface Images {
 export interface Book {
   _id: string;
   title: string;
-  caption?: string;
-  sinopsis?: string[];
-  designer?: string;
-  translator?: string;
+  caption: string;
+  sinopsis: string[];
+  designer: string;
+  translator: string;
   price: string;
   stock: number;
   authorId: Schema.Types.ObjectId;
