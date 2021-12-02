@@ -61,6 +61,26 @@ export async function getSeedBooks() {
     { firstName: "Jean-Jacques", lastName: "Sempé" },
     { _id: 1 },
   ).lean();
+  const { _id: gavinEdwardsId } = await db.Author.findOne(
+    { firstName: "Gavin", lastName: "Edwards" },
+    { _id: 1 },
+  ).lean();
+  const { _id: santiagoLorenzoId } = await db.Author.findOne(
+    { firstName: "Santiago", lastName: "Lorenzo" },
+    { _id: 1 },
+  ).lean();
+  const { _id: alfredHitchcockId } = await db.Author.findOne(
+    { firstName: "Alfred", lastName: "Hitchcock" },
+    { _id: 1 },
+  ).lean();
+  const { _id: jamesRhodesId } = await db.Author.findOne(
+    { firstName: "James", lastName: "Rhodes" },
+    { _id: 1 },
+  ).lean();
+  const { _id: laraWilliamsId } = await db.Author.findOne(
+    { firstName: "Lara", lastName: "Williams" },
+    { _id: 1 },
+  ).lean();
 
   return [
     {
@@ -274,7 +294,6 @@ export async function getSeedBooks() {
       },
       colors: ["#08173F", "#DE4A4B", "#F0F7F8"],
     },
-    ////////////////////////////////////////////////////////////////
     {
       title: "Los Simpson y la filosofía",
       caption: "Cómo entender el mundo gracias a Homer y compañía",
@@ -504,5 +523,211 @@ export async function getSeedBooks() {
       },
       colors: ["#112679", "#E39A93", "#1A1A19"],
     },
+    {
+      title: "Cómo ser Bill Murray",
+      sinopsis: [
+        "El mundo es un escenario y Bill Murray no entiende la vida sin improvisación ni sorpresa: irrumpe en fiestas anónimas y monta congas, se fuma pitillos de desconocidos o se pasea por ciudades en carrito de golf.",
+        "Todo apunta a que Bill Murray tiene una misión: quiere que seamos mejores personas: más divertidas, menos robóticas, más profundas, menos pedantes. Más libres.",
+      ],
+      price: "23.00",
+      stock: 100,
+      designer: "Jonathan Millán",
+      translator: "Ismael Attrache",
+      authorId: gavinEdwardsId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 320,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-81-16290-71-0",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2016/11/Como-ser-Bill-Murray_3D_web-e1479897567631.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2016/11/como_ser_billmurray_01.jpg",
+        ],
+      },
+      colors: ["#636162", "#1D1713", "#927151"],
+    },
+
+    {
+      title: "Los asquerosos",
+      sinopsis: [
+        "Manuel acuchilla a un policía antidisturbios que quería pegarle. Huye. Se esconde en una aldea abandonada. Sobrevive de libros Austral, vegetales de los alrededores, una pequeña compra en el Lidl que le envía su tío. Y se da cuenta de que cuanto menos tiene, menos necesita. Un thriller estático, una versión de Robinson Crusoe ambientada en la España vacía, una redefinición del concepto «austeridad». Una historia que nos hace plantearnos si los únicos sanos son los que saben que esta sociedad está enferma. Santiago Lorenzo ha escrito su novela más rabiosamente política, lírica y hermosa.",
+      ],
+      price: "21.00",
+      stock: 100,
+      designer: "Guim Tió",
+      authorId: santiagoLorenzoId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 222,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "9788417059997",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2018/09/Los-asquerosos_3D_alta.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2018/09/9788417059996.jpg",
+        ],
+      },
+      colors: ["#789848", "#CA9440", "#BCD9E2"],
+    },
+    {
+      title: "Cuentos que mi madre nunca me contó",
+      caption: "Los relatos favoritos del maestro del suspense",
+      sinopsis: [
+        "«Te aseguro que el título de este libro es una descripción totalmente exacta del contenido. No creo que mi madre me hubiera contado las historias que he recopilado aquí, ni aunque hubieran estado a su alcance. Te espera todo un abanico de emociones, exceptuando, claro está, aquellos sentimientos más tiernos y amables, con los que yo no tengo nada que ver…» Alfred Hitchcock",
+      ],
+      price: "21.00",
+      stock: 100,
+      translator: "Haizea Beitia",
+      authorId: alfredHitchcockId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 320,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-18187-43-8",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2020/10/CUB_Cuentos-que-mi-madre-nunca-me-conto%CC%81-peque.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2020/10/9788418187438.jpg",
+        ],
+      },
+      colors: ["#D55D07", "#BE0069", "#E1DD8C"],
+    },
+
+    {
+      title: "Toca el piano",
+      sinopsis: [
+        "James Rhodes es autor del bestseller «Instrumental» y uno de los concertistas de piano más reconocidos. Ahora te enseña a tocar el Preludio nº1 en Do Mayor de Bach en seis semanas.",
+        "Solo necesitas dos manos. Un simple teclado o un piano Steinway. Unos 45 minutos al día durante seis semanas. Y ganas. Ganas de lograrlo. Olvida el móvil, cierra el ordenador, apaga la televisión. Silencio.",
+        "Toca el piano.",
+      ],
+      price: "14.90",
+      stock: 100,
+      designer: "David de las Heras",
+      translator: "Ismael Attrache",
+      authorId: jamesRhodesId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 96,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-16290-57-4",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2016/11/fict-ESP.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2016/11/toca-el-piano_spn_01.jpg",
+        ],
+      },
+      colors: ["#001144", "#B97E86", "#FFFFFF"],
+    },
+    {
+      title: "Las ganas",
+      sinopsis: [
+        "Benito vive desganado, aunque se muere de ganas: anda destrozado porque lleva tres años sin sexo. Por eso colecciona llaveros, sufre lo indecible cuando ve a una mujer bonita en el metro y bebe demasiado chinchón. Sólo se lo ha contado a su hermana, aunque todo el mundo, también en el trabajo (es químico y emprendedor; es decir: empresario pobre) nota su abstinencia y su angustia. Sus problemas podrían tener una salida: María.",
+        "«Sentía envidia de María porque ella estaba consigo misma. Sólo le cupo razonar el desperdicio que sería que ellos dos no se juntaran para siempre. “Te quiero porque quiero parecerme a ti”, le escribió un día (por supuesto, No enviado). Con la sospecha feliz de que si se hicieran novios y rompieran, les costaría un trabajo ímprobo dejar de ser amigos. Sería un trabajo que nadie se tomaría, de puro irrealizable.»",
+      ],
+      price: "12.90",
+      stock: 100,
+      designer: "Gorka Olmo",
+      authorId: santiagoLorenzoId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 256,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-17552-57-2",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2019/10/Las-ganas_3D_web.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2019/09/9788417552572.jpg",
+        ],
+      },
+      colors: ["#CA4B8E", "#0D1316", "#EAEDED"],
+    },
+    {
+      title: "Los huerfanitos",
+      sinopsis: [
+        "La muerte de Ausias Susmozas, el manirroto patriarca del Pigalle, un teatro de pasado glorioso, reúne a sus tres hijos. Todos pretenden recoger algún consuelo monetario que compense el nulo cariño que les dispensó su progenitor. Pero este sólo les ha dejado una deuda inabordable: el banco se quedará el Pigalle si no logran saldarla. No tienen experiencia, pero deciden montar en tiempo récord, y con un equipo desastroso, una obra que podría salvar la vida de su teatro… e incluso la suya. Una tremenda y divertida sátira sobre el mundo teatral y sobre el mundo, en general, en quiebra.",
+        "«Al enfrentarse a la ingente tarea de la producción de su obra de teatro, los tres Susmozas imaginaban un álbum de cromos recién comprado. Que había que rellenar a base de comer pastelitos, atesorar estampas, negociar los cromos repetidos, perseverar con perspicacia hasta dar con los difíciles y pegarlos con cuidado para que quedaran derechos. Pero sin paga de domingo para comprar los pastelitos.»",
+      ],
+      price: "12.90",
+      stock: 100,
+      designer: "Gorka Olmo",
+      authorId: santiagoLorenzoId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 368,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-17552-40-4",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2019/04/Los-huerfanitos_3D_web.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2019/04/9788417552404.jpg",
+        ],
+      },
+      colors: ["#58CFF8", "#0D1417", "#EAEDEE"],
+    },
+    {
+      title: "Los millones",
+      sinopsis: [
+        "A uno del grapo le toca la Primitiva. No puede cobrar, porque no tiene DNI. En los 90 días de plazo para intentar recibir el dinero del premio, conocerá a una mujer con la que compartirá un alto déficit de cariño y una pasión casi infantil por los trenes. Manual de supervivencia, retrato de la tiranía del dinero y de la búsqueda de identidad, el debut en la narrativa de Santiago Lorenzo es un clásico de culto de nuestras letras",
+        "«Metió toda la chatarra en una caja vacía de galletas Reglero. Luego, muy quedito, Francisco se echó a llorar. Se sintió pobre, como pobre se había sabido siempre. Pero ese día, con las piezas de su tren de plástico escondiéndose bajo los tres muebles de su piso sobrecogedor, su pobreza le cayó antipática. Por oír a alguien, habló él. “Para no haber creído nunca en la suerte, qué mala que la tengo”.»",
+      ],
+      price: "12.90",
+      stock: 100,
+      designer: "Gorka Olmo",
+      authorId: santiagoLorenzoId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 256,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-17552-03-9",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2019/01/Los-millones_3D_web.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2018/12/9788417552039.jpg",
+        ],
+      },
+      colors: ["#32AE6D", "#0A1218", "#EAEDED"],
+    },
+
+    {
+      title: "Las devoradoras",
+      sinopsis: [
+        "Esta es la historia de un hambre que no se va. Y de Roberta, que vive intentando ocupar el mínimo espacio posible. A sus treinta años está atrapada en un trabajo sin sentido. Un día conoce a Stevie, una mujer libre y peligrosa. Se hacen amigas, se van a vivir juntas. Luego crean el Supper Club: un colectivo de mujeres cansadas de que les digan que tienen que hablar menos, comer menos, ser menos. Pero cuanto más popular y subversivo se vuelve ese club, más obligada se ve Roberta a reconciliarse con la vulnerabilidad de su propio cuerpo (y con ese pasado que se esfuerza tanto en reprimir.) Las devoradoras habla sobre el hambre de vivir. Sobre crecer y encontrar tu lugar en el mundo.",
+      ],
+      price: "22.90",
+      stock: 100,
+      designer: "Ignasi Monreal",
+      translator: "Laura Ibáñez",
+      authorId: laraWilliamsId,
+      techData: {
+        releaseYear: 2017,
+        pagesNumber: 336,
+        size: "14 x 21",
+        bindings: "Cartoné",
+        ISBN: "978-84-18733-01-7",
+      },
+      images: {
+        main: "https://blackiebooks.org/wp-content/uploads/2021/04/CUB_Las-devoradoras-peque.png",
+        other: [
+          "https://blackiebooks.org/wp-content/uploads/2021/04/9788418733017.jpg",
+        ],
+      },
+      colors: ["#AE000F", "#E897A2", "#1A1A19"],
+    },
+    ////////////////////////////////////////////////////////////////
   ];
 }

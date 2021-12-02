@@ -87,7 +87,6 @@ function getSeedAuthors() {
             ],
             picture: "https://blackiebooks.org/wp-content/uploads/2016/12/Gianni-Rodari.jpg",
         },
-        ////////////////////////////////////////////////////////////////
         {
             firstName: "William",
             lastName: "Irwin",
@@ -170,6 +169,61 @@ function getSeedAuthors() {
             ],
             picture: "https://blackiebooks.org/wp-content/uploads/2016/11/Jean-Jacques-Sempe%CC%81-Foto-Catherine-He%CC%81lie-2.jpg",
         },
+        {
+            firstName: "Gavin",
+            lastName: "Edwards",
+            country: "Nueva York, EEUU",
+            birthYear: 1970,
+            bio: [
+                "Desde que se graduó en Yale en 1990, Gavin Edwards ha perseguido siempre todo aquello que realmente le interesaba. En su faceta periodística, ha escrito hasta doce portadas de la revista Rolling Stone, además de firmar artículos en las cabeceras más prestigiosas, de la revista Wired al periódico The New York Times. En las estanterías de las librerías, se pueden encontrar hasta ocho libros sobre algunas de sus obsesiones, entre los que destacan la aplaudida biografía de River Phoenix, Last Night at the Viper Room: River Phoenix and the Hollywood he Left Behind y el best-seller VJ: The Unplugged Adventure of MTV’s First Wave. Cuando más recientemente quiso centrarse en algún personaje cultural verdaderamente importante para la historia de EE.UU. y del planeta, dudó entre otros artistas y el actor Bill Murray. Tuvo la suerte de conocer al segundo en una entrevista y, sobre todo, de hablar con muchísima gente que después de cruzarse con él se sentía algo diferente y mejor. Así entendió dos cosas: que quería escribir un libro sobre la filosofía vital de Murray y que la mejor forma para ser nosotros mismos (o la mejor versión de nosotros mismos) pasa por intentar seguir algunas de de las pistas que el actor nos deja. Gavin Edwards sabe, en definitiva, que entendiendo cómo es Bill Murray podemos hacer de este planeta un lugar más divertido, libre y amable.",
+            ],
+            picture: "https://blackiebooks.org/wp-content/uploads/2016/11/Gavin-Edwards-foto-Jim-McGuire.jpg",
+        },
+        {
+            firstName: "Santiago",
+            lastName: "Lorenzo",
+            country: "Portugalete",
+            birthYear: 1964,
+            bio: [
+                "Se llama Santiago Lorenzo. Los astros se alinearon para que naciera un buen día de 1964 en Portugalete, Vizcaya, España, Europa, la Tierra. el Universo. Primero miró, luego observó, después filmó y ahora escribe. En todas esas etapas vivió y en ninguna hizo lo que hacen los actores: actuar. Denle una goma de borrar Milan y unas tijeras y les creará un mundo. Aunque hace tiempo que con un teclado hace lo mismo y mejor. Este artista pretecnológico de pulsaciones lentas (quizás por su corazón grande) vive a caballo (o a autobús de varios caballos) entre Madrid y un taller que ha elegido en una aldea de Segovia que podría servir para ejemplificar la recurrente expresión “alejado del mundanal ruido”.",
+                "No siempre fue así. Estudió imagen y guión en la Universidad Complutense y dirección escénica en la RESAD de la capital del reino. Siempre tuvo claro que ante problemas reales, sólo sirven las soluciones imaginarias, así que en ese año constelación que fue 1992 creó la productora El Lápiz de la Factoría, con la que dirigió cortometrajes como Bru, Es asunto mío o el aplaudido Manualidades. Porque además de eso, al artista artesano Lorenzo siempre le gustó construir maquetas imposibles trabajadas con las manos: una cómoda con cajones que se abren por los dos lados, puertas por donde sólo podría pasar el Hombre más Delgado del Mundo y teatritos donde los Madelman son los protagonistas. Si no gozara del don de la escritura, podría haberse empleado en cualquier oficio antiguo: sereno, porque tranquilo lo es un rato, o jefe de estación ferroviaria, porque los trenes portátiles le gustan más que a un hombre alegre una pandereta. En 1995, produjo Caracol, col, col, que le valió pisar con calma la alfombra roja de los Premios Goya, que ganó en la categoría a Mejor Corto de Animación. Cuatro años después se empeñó en estrenar Mamá es boba, la historia palentina de un niño algo alelado, pero a la vez muy lúcido, acosado en el colegio  (la película fue una de las primeras en abordar el tema del bullying) y con unos padres que, a su pesar, le provocan una vergüenza tremenda. La película pasará a la historia como uno de los filmes de culto de la comedia agridulce y podría servir como mito fundacional del post-humor que busca la risa helada e incómoda. Con ella fue nominado, para su sorpresa, al Premio FIPRESCI en el Festival de Cine de Londres. En 2001 abrió, junto a Mer García Navas, Lana S.A., un taller dedicado al diseño de escenografía y decorados con el que hicieron tanto muñequitos de plastilina para el anuncio del euro como la catedral que aparece en una de las entregas de Torrente. En 2007 estrenó Un buen día lo tiene cualquiera, donde volvía a elevar una historia de una persona para explicar un problema colectivo: la incapacidad, afectiva e inmobiliaria, para encontrar un sitio en el mundo (o un piso en la ciudad, para el caso).",
+                "Harto de los tejemanejes del mundo del cine, decidió cederle sus ideas a esto de la literatura, por lo que en 2010 publicó la novela Los millones (Mondo Brutto), uno de los libros del año con un gancho cómico y un golpe más bien trágico: a uno del GRAPO le toca la lotería primitiva; no puede cobrar el premio porque carece de DNI. Desde entonces, ha escrito Los Huerfanitos, se ha deleitado con ábsides de catedrales y ha continuado atacando los vicios de la sociedad de la única forma posible: con la risa, el recurso de los hombres que gozan de una inteligencia libre de presunción. También ha seguido hablando con voz grave, lanzando chanzas coheteras y fumando un pitillo a cada hora en punto con tiros cortos. Ha hecho, en definitiva, muchas cosas, pero su mayor temor continúa siendo caerse a la ría desde lo alto del puente colgante de Portugalete, patrimonio de la Humanidad desde 2006.",
+            ],
+            picture: "https://blackiebooks.org/wp-content/uploads/2016/11/%E2%80%8BSantiago-Lorenzo-Foto-de-Cecilia-Di%CC%81az-Betz.jpg",
+        },
+        {
+            firstName: "Alfred",
+            lastName: "Hitchcock",
+            country: "Londres, Inglaterra",
+            birthYear: 1899,
+            bio: [
+                "Alfred Hitchcock nació en Inglaterra en 1899 y murió en Estados Unidos en 1980. Padre indiscutible del thriller psico­ lógico y del cine de suspense con mayúsculas, pasó del cine mudo británico al Hollywood glorioso de los años 40. A partir de entonces y hasta bien entrada la década de los 70 su carrera sería meteórica.",
+                "A él se deben técnicas tan fundamentales como el plano que imita la mirada humana, el encuadre holandés para aumentar la tensión, los primerísimos primeros planos para las escenas más impactantes y el celebérrimo MacGuffing o detalle apa­rentemente baladí que articula la narración. Toda una escuela de cine moderno nació de sus icónicos largometrajes, hoy erigi­dos clásicos indiscutibles del cine: Psicosis, Los pájaros, Vértigo, La ventana indiscreta, El hombre que sabía demasiado, Atrapa a un ladrón, Con la muerte en los talones, Rebecca y un larguísimo etcétera son aún estudiadas en escuelas de cine de todo el mun­do, y homenajeadas sin cesar en precuelas, secuelas y remakes. Es probablemente el cineasta más prolífico del cine negro, y no parece que vaya a ser destronado próximamente. También pro­tagonizó cameos en treinta y siete de sus cincuenta y tres pelícu­las, convirtiéndose así en el director de cine que más veces posó frente a las cámaras.",
+                "No es de extrañar que su pasión por el suspense, tan fundamental en su carrera artística, naciese de la literatura del gé­nero. Hitchcock era un ávido lector y jamás abandonó la lectu­ra de los grandes maestros de la novela negra. Por ello, comenzó pronto a recopilar sus propios compendios de relatos cortos, de entre los cuales Cuentos que mi madre nunca me contó es el más memorable, el más brillante, el más misterioso.",
+            ],
+            picture: "https://blackiebooks.org/wp-content/uploads/2020/10/Alfred-Hitchcock_retrat.jpg",
+        },
+        {
+            firstName: "James",
+            lastName: "Rhodes",
+            country: "Londres, Inglaterra",
+            birthYear: 1975,
+            bio: [
+                "Para entender la vida de James Rhodes, es tan importante saber que trabajó en un Burger King o como hombre de negocios en la City londinense, como que ahora es uno de los principales renovadores de la (así llamada) música clásica y un prestigioso columnista en The Guardian. Para entender su éxito en España, basta con saber que Instrumental, su libro de memorias, donde explica los abusos infantiles que padeció y ensalza el poder sanador de la música, lleva vendidos más de 100.000 ejemplares. También ha actuado en festivales tan alejados de su música como Sónar o Primera Persona. Pero, en realidad, el éxito no es tan importante como lo que se hace con él: Rhodes ha dirigido su fama a visibilizar y fomentar el debate alrededor de las violaciones a niños, las enfermedades mentales o el suicidio, ofreciendo charlas TED y conferencias en actos de Save the Children. En 2016, con Toca el piano, enseñó a sus lectores a interpretar un preludio de Bach en tan solo seis semanas. Ahora vuelve con Fugas, su libro más íntimo, en el que repasa una de sus giras más importantes y recoge las vivencias, miedos y derivas mentales de su día a día, siempre rodeado de música. Porque sabe que la música, en el mundo, «es la respuesta a aquello que no la tiene».",
+            ],
+            picture: "https://blackiebooks.org/wp-content/uploads/2016/11/James-Rhodes-%C2%A9Erin-Brubacher-1.jpg",
+        },
+        {
+            firstName: "Lara",
+            lastName: "Williams",
+            country: "Londres, Inglaterra",
+            birthYear: 1985,
+            bio: [
+                "Lara Williams vive en Manchester, Inglaterra. Es autora de un libro de cuentos, Treats, finalista del Republic of Consciousness Prize, el Edinburgh First Book Award y muchos otros premios literarios. Escribe para The Guardian, The Independent, Times Literary Supplement, Vice y Dazed entre otras publicaciones. Las devoradoras es su primera novela, que surgió cuando Wil­liams decidió matricularse en un curso de improvisación teatral como terapia de choque para combatir su timidez incapacitante: «La idea era humillarme en medio de un grupo de desconocidos, obligarme a la extroversión. Todo para “reiniciarme”, devolverme al estado de no timidez. Las devoradoras es, por tanto, una especie de abandono a la ansiedad como tratamiento. Cuando comencé a escribirla me interesaba el acuerdo tácito de las mujeres para hacerse pequeñas y cómo esto acaba siendo la forma correcta de la feminidad, mostrar siempre complacencia y reprimirse. Y el apetito, en el sentido más amplio, me parecía un medio de expresión perfecto». El resultado es el libro que tienes en las manos, que The Guar­dian escogió entre los mejores libros de2019, calificándolo de «club de lucha feminista»",
+            ],
+            picture: "https://blackiebooks.org/wp-content/uploads/2021/04/lara-williams.jpg",
+        },
+        ////////////////////////////////////////////////////////////////
     ];
 }
 exports.getSeedAuthors = getSeedAuthors;
