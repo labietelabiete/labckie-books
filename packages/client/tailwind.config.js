@@ -13,7 +13,9 @@ module.exports = {
         blueSecondary: "#5CA4A9",
       },
       fontFamily: {
-        anton: ["Anton", "sans-serif"],
+        // anton: ["Anton", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
       },
     },
   },
