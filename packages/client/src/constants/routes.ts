@@ -4,6 +4,7 @@ export const PUBLIC = {
   HOME: "/",
   BOOK: "/book",
   AUTHOR: "/author",
+  SUMMARY: "cart-summary",
 };
 
 export const API = {
