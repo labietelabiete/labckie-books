@@ -31,7 +31,7 @@ const bookSchema = new Schema<Book>(
     },
 
     price: {
-      type: Number,
+      type: String,
       required: [true, "Price is required"],
     },
     stock: {

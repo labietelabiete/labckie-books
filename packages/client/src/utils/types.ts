@@ -57,7 +57,7 @@ export interface Book {
   sinopsis?: [string];
   designer?: string;
   translator?: string;
-  price: number;
+  price: string;
   stock: number;
   authorId: BookAuthor;
   techData: TechData;

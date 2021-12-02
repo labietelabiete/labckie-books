@@ -29,7 +29,7 @@ const bookSchema = new mongoose_1.Schema({
         trim: true,
     },
     price: {
-        type: Number,
+        type: String,
         required: [true, "Price is required"],
     },
     stock: {

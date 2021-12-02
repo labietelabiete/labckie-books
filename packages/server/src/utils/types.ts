@@ -21,20 +21,20 @@ interface TechData {
 
 interface Images {
   main: string;
-  others?: [string];
+  others?: string[];
 }
 
 export interface Book {
   _id: string;
   title: string;
   caption?: string;
-  sinopsis?: [string];
+  sinopsis?: string[];
   designer?: string;
   translator?: string;
-  price: number;
+  price: string;
   stock: number;
   authorId: Schema.Types.ObjectId;
   techData: TechData;
   images: Images;
-  colors: [string];
+  colors: string[];
 }

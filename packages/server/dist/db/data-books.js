@@ -32,7 +32,7 @@ function getSeedBooks() {
                     "Al fin en un mismo libro la vida y la obra de una poeta genial que vio su carrera ensombrecida primero por su género, después por su clase social y finalmente por su fama. El libro sobre la verdadera Gloria Fuertes.",
                 ],
                 designer: "Jorge de Cascante",
-                price: 24.9,
+                price: "24.90",
                 stock: 100,
                 authorId: gloriaFuertesId,
                 techData: {
@@ -63,7 +63,7 @@ function getSeedBooks() {
                     "Carlo Padial, considerado el Woody Allen de aquí, relata la terapia que cambió su vida. El resultado demuestra que un libro hilarante puede ser, también, rotundamente desolador, profundo y, al mismo tiempo, vitalista.",
                 ],
                 designer: "Jonathan Millán",
-                price: 19.0,
+                price: "19.00",
                 stock: 100,
                 authorId: carloPadialId,
                 techData: {
@@ -91,7 +91,7 @@ function getSeedBooks() {
                 ],
                 designer: "Edward Gorey",
                 translator: "Manuel Broncano",
-                price: 16.0,
+                price: "16.00",
                 stock: 100,
                 authorId: florenceParryId,
                 techData: {
@@ -113,7 +113,7 @@ function getSeedBooks() {
                 title: "Prohibido nacer",
                 designer: "David de las Heras",
                 translator: "Javier Calvo",
-                price: 19.0,
+                price: "19.00",
                 stock: 100,
                 authorId: trevorNoahId,
                 techData: {
@@ -139,7 +139,7 @@ function getSeedBooks() {
                     "Te animaron a bailar twist sin tocar a tu pareja para aislarte en un nuevo mundo individualista × Te colocaron en las orejas auriculares como parte de un experimento de control social × Te aconsejaron que te afeitaras el vello púbico para que fueras más insensible y mecánico × Te dijeron que abrazaras Apple para arrebatarte todas tus posesiones × Te regalaron manuales de instrucciones de Ikea para que rompieras con tu pareja × Te invitaron a ser alternativo, pero no te dieron alternativa a serlo × Te convencieron de que debías seguir a ídolos de escayola de un rock de derechas × Te atiborraron de bebidas azucaradas imperialistas hasta hacerte adicto × Te obligaron a trabajar gratis en Wikipedia como trabajaron otros esclavos en las pirámides × Te vendieron pop-art para que no lucharas por un mundo más humano × Te engancharon a series de HBO para que solo quisieras comprar y mirar. Nunca crear × Te enrolaron en una sociedad sin conciencia de clase, pero con miedo y asco de los pobres × ¡Te están robando el alma!",
                     "Ian Svenonius enlaza con su lógica lúdica y delirante el azúcar de caña, las nuevas tecnologías, los bailes de moda o la geopolítica mundial en una bomba ensayística que oscila entre lo certero, lo conspiranoico y lo tristemente real. Un libelo siempre crítico con el mundo de ayer e incendiario con el mundo de hoy para crear algún tipo de mundo del mañana donde los humanos podamos estar vivos. Sentirnos vivos.",
                 ],
-                price: 18.9,
+                price: "18.90",
                 stock: 100,
                 authorId: ianSvenoniusId,
                 techData: {
@@ -164,7 +164,7 @@ function getSeedBooks() {
                 sinopsis: [
                     "Alastair Bonnett escribe sobre 48 lugares fuera del mapa. Una oda a la peculiaridad de un lugar frente a un mundo globalizado. A lo inesperado en un planeta mapeado (y por tanto explicado) por las nuevas grandes corporaciones. A las fronteras difusas y las fantasías reales. A la idea de que ni el hombre actual lo sabe todo ni todo está descubierto y conquistado. Al territorio como fábrica de nuestras vidas, donde construimos nuestra identidad y memoria.",
                 ],
-                price: 23.0,
+                price: "23.00",
                 stock: 100,
                 authorId: alastairBonnett,
                 techData: {
@@ -194,7 +194,7 @@ function getSeedBooks() {
                     "También nos dice que el espacio y el tiempo no son lo que parecen. Ni nuestro planeta. Ni nosotros. Esta fórmula de Einstein es una de las más importantes y bellas de la historia de la humanidad.",
                     "La nueva obra de uno de los divulgadores científicos del momento: Christophe Galfard. 5 ediciones y 35.000 ejemplares vendidos de su anterior libro, El universo en tu mano.",
                 ],
-                price: 13.9,
+                price: "13.90",
                 stock: 100,
                 authorId: cristopheGalfardId,
                 techData: {
@@ -218,7 +218,7 @@ function getSeedBooks() {
                 sinopsis: [
                     "Estos textos de Gianni Rodari, el maestro de la fantasía, fueron escritos en los años setenta, pero su apuesta insobornable por una enseñanza más plena y creativa sigue siendo totalmente moderna.",
                 ],
-                price: 17.9,
+                price: "17.90",
                 stock: 100,
                 authorId: gianniRodari,
                 techData: {

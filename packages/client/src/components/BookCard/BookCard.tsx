@@ -13,7 +13,7 @@ export default function BookCard({
     <div className="m-3 mb-10 pb-4 border-4 border-black border-opacity-0 rounded-xl hover:border-opacity-100">
       <Link to={`${PUBLIC.BOOK}/${book._id}`}>
         <img
-          className="bg-white rounded-t-xl p-9"
+          className="bg-white rounded-t-xl p-9 ss"
           src={book.images.main}
           alt={book.title}
         />
@@ -27,14 +27,9 @@ export default function BookCard({
             {book.authorId.firstName} {book.authorId.lastName}
           </h3>
         </Link>
-        <p className="text-xl text-right font-bold mr-6">{book.price}€</p>
       </div>
-      <div className="flex justify-between mx-4 mt-3">
-        <Link className="w-1/2" to={`${PUBLIC.BOOK}/${book._id}`}>
-          <button className="p-2 px-5 m-2 bg-black text-white rounded-lg hover:opacity-80">
-            Ver detalles
-          </button>
-        </Link>
+      <div className="flex items-center justify-between mx-0 mt-1">
+        <p className="ml-6 text-xl text-right font-bold">{book.price}€</p>
         <button className="w-1/2 p-2 m-2 bg-black text-white rounded-lg hover:opacity-80">
           Añadir al carrito
         </button>
