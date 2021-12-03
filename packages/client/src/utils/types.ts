@@ -64,3 +64,14 @@ export interface BookProps {
   images: Images;
   colors: string[];
 }
+
+export interface AuthorProps {
+  _id: string;
+  bio: string[];
+  firstName: string;
+  lastName: string;
+  country: string;
+  birthYear: number;
+  picture: string;
+  books: BookCardProps[];
+}

@@ -48,7 +48,6 @@ export default function Book(): React.ReactElement {
     if (typeof id === "string") {
       const data = await getBookById(id);
       setBook(data.data.book);
-      console.log(data.data.book);
       setLoading(false);
     }
   };
