@@ -10,8 +10,15 @@ export interface LayoutProps extends OnlyChildren {
 }
 
 // Redux
-export interface ShoppingCartReduxState {
-  nItems: number;
+
+export interface CartReduxState {
+  n: number;
+  _id: string;
+  title: string;
+  images: Images;
+  author: string;
+  authorId: string;
+  price: number | string;
 }
 // Books objects
 
@@ -43,7 +50,7 @@ export interface BookCardProps {
   _id: string;
   title: string;
   caption?: string;
-  price: number;
+  price: string;
   images: Images;
   colors: string[];
   authorId: BookAuthor;

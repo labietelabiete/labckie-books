@@ -15,9 +15,11 @@ export default function Cart() {
         <p className="text-base font-oswald">39.00€</p>
         <AiOutlineShoppingCart className="text-4xl ml-1" />
       </button>
-      <div className="absolute top-10 right-3 px-2 z-10 rounded-full bg-salmonSecondary text-white">
-        <p>{cartState.nItems}</p>
-      </div>
+      {cartState.books && (
+        <div className="absolute top-10 right-3 px-2 z-10 rounded-full bg-salmonSecondary text-white">
+          <p>{cartState.books.length}</p>
+        </div>
+      )}
     </>
   );
 }

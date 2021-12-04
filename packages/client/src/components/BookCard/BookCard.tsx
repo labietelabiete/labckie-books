@@ -1,21 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-import { addToCart } from "../../redux/cart/actions";
+import { addToCart, addToCartRepeat } from "../../redux/cart/actions";
 
 import { PUBLIC } from "../../constants/routes";
 import { BookCardProps } from "../../utils/types";
+import { CartReduxState } from "../../utils/types";
 
 export default function BookCard({
   book,
 }: {
   book: BookCardProps;
 }): React.ReactElement {
+  const cartState = useSelector((state: any) => state.cart);
   const dispatch = useDispatch<any>();
 
   const handleAddToCart = () => {
-    dispatch(addToCart());
+    const bookRepeat = cartState.books.find(
+      (item: CartReduxState) => item._id === book._id
+    );
+    if (!bookRepeat) {
+      const bookObject: CartReduxState = {
+        n: 1,
+        _id: book._id,
+        title: book.title,
+        images: book.images,
+        author: `${book.authorId.firstName} ${book.authorId.lastName}`,
+        authorId: book.authorId._id,
+        price: parseFloat(book.price).toFixed(2),
+      };
+      dispatch(addToCart(bookObject));
+    } else {
+      const indexRepeat = cartState.books.findIndex(
+        (item: CartReduxState) => item._id === book._id
+      );
+      dispatch(addToCartRepeat(indexRepeat));
+    }
   };
 
   return (

@@ -37,7 +37,7 @@ export default function Book(): React.ReactElement {
   };
 
   const handleAddToCart = () => {
-    dispatch(addToCart());
+    // dispatch(addToCart());
   };
 
   const { id } = useMatch(`${PUBLIC.BOOK}/:id`)!.params;

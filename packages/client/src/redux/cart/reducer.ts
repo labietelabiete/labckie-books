@@ -1,12 +1,9 @@
 import initialState from "./state";
-import { RESET_CART, ADD_TO_CART } from "./types";
+import { RESET_CART, ADD_TO_CART, ADD_TO_CART_REPEAT } from "./types";
 
-import { ShoppingCartReduxState } from "../../utils/types";
+import { CartReduxState } from "../../utils/types";
 
-const reducer = (
-  state: ShoppingCartReduxState = initialState,
-  action: any
-): ShoppingCartReduxState => {
+const reducer = (state: any = initialState, action: any): CartReduxState => {
   switch (action.type) {
     case RESET_CART: {
       return initialState;
@@ -14,7 +11,19 @@ const reducer = (
     case ADD_TO_CART: {
       return {
         ...state,
-        nItems: ++state.nItems,
+        books: [...state.books, action.payload],
+      };
+    }
+    case ADD_TO_CART_REPEAT: {
+      const bookRepeated = state.books[action.payload];
+      bookRepeated.n++;
+      return {
+        ...state,
+        books: [
+          ...state.books.slice(0, action.payload),
+          bookRepeated,
+          ...state.books.slice(action.payload + 1),
+        ],
       };
     }
 
