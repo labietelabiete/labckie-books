@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export default function Cart() {
+  const cartState = useSelector((state: any) => state.cart);
+
   return (
     <>
       <button
@@ -13,7 +16,7 @@ export default function Cart() {
         <AiOutlineShoppingCart className="text-4xl ml-1" />
       </button>
       <div className="absolute top-10 right-3 px-2 z-10 rounded-full bg-salmonSecondary text-white">
-        <p>4</p>
+        <p>{cartState.nItems}</p>
       </div>
     </>
   );

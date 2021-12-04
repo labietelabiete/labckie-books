@@ -64,6 +64,7 @@ function getById(req, res, next) {
                 caption: 1,
                 images: 1,
                 colors: 1,
+                price: 1,
             });
             author.books = books;
             res.status(200).send({ author });

@@ -59,6 +59,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
         caption: 1,
         images: 1,
         colors: 1,
+        price: 1,
       },
     );
 

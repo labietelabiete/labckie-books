@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useMatch, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import { addToCart } from "../../redux/cart/actions";
 
 import Layout from "../../components/Layout";
 
@@ -15,7 +18,7 @@ import { css } from "@emotion/react";
 export default function Book(): React.ReactElement {
   const [loading, setLoading] = useState<boolean>(false);
   const [book, setBook] = useState<BookProps>();
-  // const [nItems, setNItems] = useState<number>(0);
+  const dispatch = useDispatch<any>();
 
   const override = css`
     display: block;
@@ -33,13 +36,9 @@ export default function Book(): React.ReactElement {
     backgroundColor: `${book?.colors[2]}`,
   };
 
-  // const handleMinusItem = () => {
-  //   if (nItems > 0) setNItems(nItems - 1);
-  // };
-
-  // const handlePlusItem = () => {
-  //   setNItems(nItems + 1);
-  // };
+  const handleAddToCart = () => {
+    dispatch(addToCart());
+  };
 
   const { id } = useMatch(`${PUBLIC.BOOK}/:id`)!.params;
 
@@ -86,26 +85,10 @@ export default function Book(): React.ReactElement {
                 <p key={item}>{item}</p>
               ))}
             </div>
-            {/* <div className="flex items-center mt-6">
-              <button
-                onClick={handleMinusItem}
-                className="rounded-fully px-2 my-1 text-xl text-white"
-                style={firstColor}
-              >
-                -
-              </button>
-              <p className="mx-2 text-3xl font-oswald text-bold">{nItems}</p>
-              <button
-                onClick={handlePlusItem}
-                className="rounded-fully px-2 my-1 text-xl text-white"
-                style={firstColor}
-              >
-                +
-              </button>
-            </div> */}
             <div className="flex items-center justify-between mt-8">
               <p className="text-3xl font-bold font-oswald">{book?.price}€</p>
               <button
+                onClick={handleAddToCart}
                 style={firstColor}
                 className="p-2 px-6 text-white rounded-lg hover:opacity-90 font-mulish"
               >

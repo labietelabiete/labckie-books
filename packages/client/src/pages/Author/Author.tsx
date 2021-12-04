@@ -53,16 +53,11 @@ export default function Author(): React.ReactElement {
             </div>
             <div className="w-4/5">
               <h2 className="mt-2 text-5xl font-bold font-oswald">
-                {author?.firstName} {author?.firstName}
+                {author?.firstName} {author?.lastName}
               </h2>
               <h3 className="mt-3 text-2xl text-greyPrimary font-mulish hover:opacity-80">
                 {author?.country}, {author?.birthYear}
               </h3>
-              {/* <div className="w-100 mt-6 flex">
-              <div className="h-1 w-4/12" style={firstColor}></div>
-              <div className="h-1 w-4/12" style={secondColor}></div>
-              <div className="h-1 w-4/12" style={thirdColor}></div>
-            </div> */}
               <div className="mt-6 text-sm text-greyPrimary font-mulish">
                 {author?.bio.map((item: string) => (
                   <p className="mb-3" key={item}>
@@ -72,7 +67,19 @@ export default function Author(): React.ReactElement {
               </div>
             </div>
           </div>
-          {/* <BooksList books={author?.books}></BooksList> */}
+          <div className="w-100 mx-48 mt-12 flex">
+            <div className="h-1 w-1/4 bg-black"></div>
+            <div className="h-1 w-1/4 bg-greyPrimary"></div>
+            <div className="h-1 w-1/4 bg-black"></div>
+            <div className="h-1 w-1/4 bg-greyPrimary"></div>
+          </div>
+          <div className="mt-12 mx-48">
+            <h2 className="mb-3 text-5xl font-bold font-oswald">
+              Libros de {author?.firstName} {author?.lastName}
+            </h2>
+
+            <BooksList books={author?.books}></BooksList>
+          </div>
         </>
       )}
     </Layout>

@@ -10,10 +10,9 @@ export interface LayoutProps extends OnlyChildren {
 }
 
 // Redux
-export interface ReduxState {
-  isLight: boolean;
+export interface ShoppingCartReduxState {
+  nItems: number;
 }
-
 // Books objects
 
 interface TechData {
