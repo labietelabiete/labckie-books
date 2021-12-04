@@ -13,11 +13,11 @@ export interface LayoutProps extends OnlyChildren {
 
 export interface CartReduxState {
   n: number;
-  _id: string;
-  title: string;
-  images: Images;
+  _id: string | any;
+  title: string | any;
+  images: Images | any;
   author: string;
-  authorId: string;
+  authorId: string | any;
   price: number | any;
 }
 // Books objects

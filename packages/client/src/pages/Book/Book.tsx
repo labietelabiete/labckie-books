@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useMatch, Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-import { addToCart } from "../../redux/cart/actions";
+import { addToCart, addToCartRepeat } from "../../redux/cart/actions";
 
 import Layout from "../../components/Layout";
 
@@ -11,6 +11,7 @@ import { PUBLIC } from "../../constants/routes";
 import { getBookById } from "./../../api/book-api";
 
 import { BookProps } from "../../utils/types";
+import { CartReduxState } from "../../utils/types";
 
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
@@ -18,6 +19,7 @@ import { css } from "@emotion/react";
 export default function Book(): React.ReactElement {
   const [loading, setLoading] = useState<boolean>(false);
   const [book, setBook] = useState<BookProps>();
+  const cartState = useSelector((state: any) => state.cart);
   const dispatch = useDispatch<any>();
 
   const override = css`
@@ -37,7 +39,27 @@ export default function Book(): React.ReactElement {
   };
 
   const handleAddToCart = () => {
-    // dispatch(addToCart());
+    const bookRepeat = cartState.books.find(
+      (item: CartReduxState) => item._id === book?._id
+    );
+    if (!bookRepeat) {
+      const numberPrice: number = +book?.price;
+      const bookObject: CartReduxState = {
+        n: 1,
+        _id: book?._id,
+        title: book?.title,
+        images: book?.images,
+        author: `${book?.authorId.firstName} ${book?.authorId.lastName}`,
+        authorId: book?.authorId._id,
+        price: numberPrice,
+      };
+      dispatch(addToCart(bookObject));
+    } else {
+      const indexRepeat = cartState.books.findIndex(
+        (item: CartReduxState) => item._id === book?._id
+      );
+      dispatch(addToCartRepeat(indexRepeat));
+    }
   };
 
   const { id } = useMatch(`${PUBLIC.BOOK}/:id`)!.params;
