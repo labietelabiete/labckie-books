@@ -21,6 +21,7 @@ export default function BookCard({
       (item: CartReduxState) => item._id === book._id
     );
     if (!bookRepeat) {
+      const numberPrice: number = +book.price;
       const bookObject: CartReduxState = {
         n: 1,
         _id: book._id,
@@ -28,7 +29,7 @@ export default function BookCard({
         images: book.images,
         author: `${book.authorId.firstName} ${book.authorId.lastName}`,
         authorId: book.authorId._id,
-        price: parseFloat(book.price).toFixed(2),
+        price: numberPrice,
       };
       dispatch(addToCart(bookObject));
     } else {

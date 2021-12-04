@@ -18,7 +18,7 @@ export interface CartReduxState {
   images: Images;
   author: string;
   authorId: string;
-  price: number | string;
+  price: number | any;
 }
 // Books objects
 
@@ -50,7 +50,7 @@ export interface BookCardProps {
   _id: string;
   title: string;
   caption?: string;
-  price: string;
+  price: string | any;
   images: Images;
   colors: string[];
   authorId: BookAuthor;
@@ -63,7 +63,7 @@ export interface BookProps {
   sinopsis: string[];
   designer: string;
   translator: string;
-  price: string;
+  price: string | any;
   stock: number;
   authorId: BookAuthor;
   techData: TechData;
