@@ -9,6 +9,20 @@ export interface LayoutProps extends OnlyChildren {
   docTitle?: string;
 }
 
+export interface InputProps {
+  id?: string;
+  value?: string;
+  type: string;
+  label?: string;
+  fullWidth?: boolean;
+  placeholder?: string;
+  handleChange?: any;
+  handleBlur?: any;
+  handleInput?: any;
+  errorMessage?: string | any;
+  hasErrorMessage?: boolean | any;
+}
+
 // Redux
 
 export interface CartReduxState {
@@ -19,6 +33,16 @@ export interface CartReduxState {
   author: string;
   authorId: string | any;
   price: number | any;
+}
+
+export interface PurchaseReduxState {
+  name: string;
+  lastName: string;
+  email: string;
+  direction: string;
+  city: string;
+  cp: string;
+  phone: string;
 }
 // Books objects
 

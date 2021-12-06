@@ -9,6 +9,7 @@ import { getTotalBooks } from "../../utils/cart-functions";
 import { CartReduxState } from "../../utils/types";
 
 import {
+  resetCart,
   removeFromCart,
   addToCartRepeat,
   removeFromCartRepeat,
@@ -39,6 +40,7 @@ export default function CartItem({ book }: { book: CartReduxState }) {
       dispatch(removeFromCartRepeat(indexRepeat));
     }
     if (getTotalBooks(cartState.books) === 0) {
+      dispatch(resetCart());
       navigate(PUBLIC.HOME);
     }
   };

@@ -49,7 +49,7 @@ export default function Summary(): React.ReactElement {
                 Home
               </button>
             </Link>
-            <Link to={PUBLIC.HOME}>
+            <Link to={PUBLIC.DELIVERY}>
               <button className="py-2 px-6 rounded-xl bg-salmonSecondary text-white font-mulish hover:opacity-80">
                 Checkout
               </button>

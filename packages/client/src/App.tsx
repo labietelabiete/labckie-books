@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Author from "./pages/Author";
 import Summary from "./pages/Summary";
+import Delivery from "./pages/Delivery";
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App(): React.ReactElement {
       <Routes>
         <Route path={`${PUBLIC.AUTHOR}/:id`} element={<Author />} />
         <Route path={`${PUBLIC.BOOK}/:id`} element={<Book />} />
+        <Route path={PUBLIC.DELIVERY} element={<Delivery />} />
         <Route path={PUBLIC.SUMMARY} element={<Summary />} />
         <Route path={PUBLIC.HOME} element={<Home />} />
       </Routes>
