@@ -18,7 +18,7 @@ export default function Delivery(): React.ReactElement {
 
   const formik = useFormik({
     initialValues: {
-      name: purchaseState.delivery.name || "",
+      name: purchaseState.delivery.name,
       lastName: purchaseState.delivery.lastName || "",
       email: purchaseState.delivery.email || "",
       direction: purchaseState.delivery.direction || "",
@@ -126,7 +126,7 @@ export default function Delivery(): React.ReactElement {
                 label="Teléfono"
                 id="phone"
                 value={formik.values.phone}
-                placeholder="Mobile"
+                placeholder="Teléfono"
                 handleChange={formik.handleChange}
                 handleBlur={formik.handleBlur}
                 errorMessage={formik.errors.phone}

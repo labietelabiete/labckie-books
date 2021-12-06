@@ -22,12 +22,9 @@ export const deliverySchema = Yup.object().shape({
     .matches(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/, "Only letters accepted")
     .required("Ciudad obligatoria"),
   cp: Yup.string()
-    .min(3, "CP demasiado corto!")
+    .min(5, "CP demasiado corto!")
     .max(10, "CP demasiado largo!")
-    .matches(
-      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
-      "CP no válido"
-    )
+    .matches(/^[0-9]+$/, "CP no válido")
     .required("CP obligatorio"),
   phone: Yup.string()
     .min(4, "Teléfono demasiado corto!")

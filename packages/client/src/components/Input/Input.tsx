@@ -32,6 +32,7 @@ export default function Input({
           type={type}
           className="mt-1 p-1 pl-3 w-full rounded-xl border-2 border-black"
           id={id}
+          value={value}
           name={id}
           placeholder={placeholder}
           onChange={handleChange}
@@ -42,7 +43,9 @@ export default function Input({
       </div>
       <div className="">
         {hasErrorMessage && errorMessage ? (
-          <p className="my-3 font-bold font-mulish text-salmonSecondary">{errorMessage}</p>
+          <p className="my-3 font-bold font-mulish text-salmonSecondary">
+            {errorMessage}
+          </p>
         ) : (
           <p className="">&nbsp;</p>
         )}

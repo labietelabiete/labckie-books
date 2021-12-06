@@ -29,7 +29,7 @@ export default function SearchBar(): React.ReactElement {
           className="bg-black p-3 w-80 rounded-xl border-2 border-white text-white shadow-2xl"
           id="searchBar"
           name="searchBar"
-          placeholder="Search for books, authors..."
+          placeholder="Busca por libro, autor..."
           value={formik.values.searchBar}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
