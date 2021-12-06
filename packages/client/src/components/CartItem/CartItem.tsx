@@ -44,14 +44,14 @@ export default function CartItem({ book }: { book: CartReduxState }) {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mb-12">
       <Link to={`${PUBLIC.BOOK}/${book._id}`}>
-        <img className="h-3/4" src={book.images.main} alt={book.title} />
+        <img className="pl-12" src={book.images.main} alt={book.title} />
       </Link>
-      <div className="w-4/5 mt-3">
+      <div className="w-4/5 mt-8 ml-12">
         <h2 className="text-2xl font-bold font-oswald">{book.title}</h2>
         <h3 className="text-lg text-greyPrimary font-mulish">{book.author}</h3>
-        <div className="flex items-center">
+        <div className="flex items-center mt-3">
           <button onClick={handleRemoveOneFromCart}>
             <AiFillMinusCircle className="text-xl" />
           </button>
@@ -60,7 +60,7 @@ export default function CartItem({ book }: { book: CartReduxState }) {
             <AiFillPlusCircle className="text-xl" />
           </button>
         </div>
-        <div className="flex items-end">
+        <div className="flex items-end mt-3">
           <p className="text-xl font-mulish">Price:</p>
           <p className="text-2xl ml-2 font-oswald font-bold">
             {book.price.toFixed(2)}€

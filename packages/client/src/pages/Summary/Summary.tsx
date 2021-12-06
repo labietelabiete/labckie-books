@@ -14,7 +14,7 @@ export default function Summary(): React.ReactElement {
 
   return (
     <Layout docTitle="Cart Summary">
-      <div className="flex justify-center mt-28 mx-6">
+      <div className="flex justify-center mt-28 mx-6 mb-6">
         <div className="mr-12">
           <CartList />
         </div>
