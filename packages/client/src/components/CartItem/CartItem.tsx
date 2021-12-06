@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { PUBLIC } from "../../constants/routes";
+
+import { getTotalBooks } from "../../utils/cart-functions";
 
 import { CartReduxState } from "../../utils/types";
 
@@ -20,6 +22,8 @@ export default function CartItem({ book }: { book: CartReduxState }) {
   const cartState = useSelector((state: any) => state.cart);
   const dispatch = useDispatch<any>();
 
+  const navigate = useNavigate();
+
   const handleAddOneToCart = () => {
     const indexRepeat = cartState.books.findIndex(
       (item: CartReduxState) => item._id === book?._id
@@ -34,6 +38,9 @@ export default function CartItem({ book }: { book: CartReduxState }) {
       );
       dispatch(removeFromCartRepeat(indexRepeat));
     }
+    if (getTotalBooks(cartState.books) === 0) {
+      navigate(PUBLIC.HOME);
+    }
   };
 
   const handleRemoveFromCart = () => {
@@ -41,6 +48,9 @@ export default function CartItem({ book }: { book: CartReduxState }) {
       (item: CartReduxState) => item._id === book?._id
     );
     dispatch(removeFromCart(indexRepeat));
+    if (getTotalBooks(cartState.books) === 1) {
+      navigate(PUBLIC.HOME);
+    }
   };
 
   return (
