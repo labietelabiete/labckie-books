@@ -20,6 +20,9 @@ module.exports = {
       borderRadius: {
         fully: "100000000000px",
       },
+      height: {
+        33: "30%",
+      }
     },
   },
   variants: {

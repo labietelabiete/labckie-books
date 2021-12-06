@@ -7,5 +7,11 @@ export function getTotalPrice(cartItems: CartReduxState[]) {
     },
     0
   );
-  return totalPriceNumber.toFixed(2)
+  return totalPriceNumber.toFixed(2);
+}
+
+export function getTotalBooks(cartItems: CartReduxState[]) {
+  return cartItems.reduce((sum: number, book: CartReduxState) => {
+    return sum + book.n;
+  }, 0);
 }

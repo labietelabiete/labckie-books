@@ -1,16 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { CartReduxState } from "../../utils/types";
-import { getTotalPrice } from "../../utils/cart-functions";
+import { PUBLIC } from "../../constants/routes";
+
+import { getTotalPrice, getTotalBooks } from "../../utils/cart-functions";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-export default function Cart() {
+export default function Cart(): React.ReactElement {
   const cartState = useSelector((state: any) => state.cart);
 
   return (
-    <>
+    <Link to={PUBLIC.SUMMARY}>
       <button
         className="flex w-32 items-center justify-center py-4 px-2 bg-black rounded-3xl border-2 border-white text-white text-xl absolute right-1 hover:opacity-80 shadow-2xl"
         type="submit"
@@ -22,13 +24,9 @@ export default function Cart() {
       </button>
       {cartState.books && (
         <div className="absolute top-10 right-3 px-2 z-10 rounded-full bg-salmonSecondary text-white">
-          <p>
-            {cartState.books.reduce((sum: number, book: CartReduxState) => {
-              return sum + book.n;
-            }, 0)}
-          </p>
+          <p>{getTotalBooks(cartState.books)}</p>
         </div>
       )}
-    </>
+    </Link>
   );
 }

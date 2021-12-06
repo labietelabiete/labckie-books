@@ -55,7 +55,7 @@ export default function Author(): React.ReactElement {
               <h2 className="mt-2 text-5xl font-bold font-oswald">
                 {author?.firstName} {author?.lastName}
               </h2>
-              <h3 className="mt-3 text-2xl text-greyPrimary font-mulish hover:opacity-80">
+              <h3 className="mt-3 text-2xl text-greyPrimary font-mulish">
                 {author?.country}, {author?.birthYear}
               </h3>
               <div className="mt-6 text-sm text-greyPrimary font-mulish">

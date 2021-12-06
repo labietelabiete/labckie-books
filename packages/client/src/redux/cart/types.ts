@@ -1,3 +1,5 @@
 export const RESET_CART = "RESET_CART";
 export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const ADD_TO_CART_REPEAT = "ADD_TO_CART_REPEAT";
+export const REMOVE_FROM_CART_REPEAT = "REMOVE_FROM_CART_REPEAT";

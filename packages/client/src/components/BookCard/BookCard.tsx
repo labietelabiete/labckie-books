@@ -53,9 +53,7 @@ export default function BookCard({
         <>
           <div className="mt-3">
             <Link to={`${PUBLIC.BOOK}/${book._id}`}>
-              <h2 className="text-2xl text-center anton font-oswald">
-                {book.title}
-              </h2>
+              <h2 className="text-2xl text-center font-oswald">{book.title}</h2>
             </Link>
 
             <Link to={`${PUBLIC.AUTHOR}/${book.authorId._id}`}>
