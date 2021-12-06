@@ -6,6 +6,7 @@ export const PUBLIC = {
   AUTHOR: "/author",
   SUMMARY: "/cart-summary",
   DELIVERY: "/checkout/devivery",
+  PAYMENT: "/checkout/paymennt",
 };
 
 export const API = {

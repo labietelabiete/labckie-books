@@ -23,6 +23,14 @@ export interface InputProps {
   hasErrorMessage?: boolean | any;
 }
 
+export interface CreditCardProps {
+  cvc: string;
+  expiry: string;
+  focus: string;
+  name: string;
+  number: string;
+}
+
 // Redux
 
 export interface CartReduxState {

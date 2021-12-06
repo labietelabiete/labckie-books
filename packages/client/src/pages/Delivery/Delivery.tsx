@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 
 import Layout from "../../components/Layout";
@@ -15,6 +15,8 @@ import deliverySchema from "./delivery-schema";
 export default function Delivery(): React.ReactElement {
   const purchaseState = useSelector((state: any) => state.purchase);
   const dispatch = useDispatch<any>();
+
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -37,8 +39,8 @@ export default function Delivery(): React.ReactElement {
         cp: deliveryState.cp,
         phone: deliveryState.phone,
       };
-      console.log(deliveryInfo);
       dispatch(addDelivery(deliveryInfo));
+      navigate(PUBLIC.PAYMENT);
     },
   });
 
