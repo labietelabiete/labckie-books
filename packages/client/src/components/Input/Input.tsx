@@ -13,6 +13,7 @@ export default function Input({
   placeholder = "",
   handleChange = () => {},
   handleBlur = () => {},
+  handleFocus = () => {},
   handleInput = () => {},
   errorMessage,
   hasErrorMessage,
@@ -37,7 +38,8 @@ export default function Input({
           placeholder={placeholder}
           onChange={handleChange}
           onBlur={handleBlur}
-          onInput={handleInput}
+          onFocus={handleFocus}
+          // onInput={handleInput}
           {...props}
         />
       </div>

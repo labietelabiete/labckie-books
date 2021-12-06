@@ -2,64 +2,104 @@ import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useFormik } from "formik";
+
+import Layout from "../../components/Layout";
+import Input from "../../components/Input";
+
+import { ReactCreditCardProps } from "../../utils/types";
+
+import creditCardSchema from "./credit-card-schema";
 
 import "react-credit-cards/es/styles-compiled.css";
 
 export default function Payment() {
-  const [cardValues, setCardValues] = useState({
+  const [cardValues, setCardValues] = useState<ReactCreditCardProps>({
     cvc: "",
     expiry: "",
-    focus: "name",
+    focused: "number",
     name: "",
     number: "",
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      cvc: "",
+      expiry: "",
+      name: "",
+      number: "",
+    },
+    validationSchema: creditCardSchema,
+    onSubmit: async (creditCardState) => {
+      console.log(creditCardState);
+    },
   });
 
   const handleInputFocus = (e: any) => {
     setCardValues({
       ...cardValues,
-      [focus]: e.target.value,
+      focused: e.target.name,
     });
   };
 
-  const handleInputChange = (e: any) => {
-    setCardValues({
-      ...cardValues,
-      [e.target.name]: e.target.value,
-    });
-  };
   return (
     <div id="PaymentForm">
       <Cards
-        cvc={cardValues.cvc}
-        expiry={cardValues.expiry}
-        focused={cardValues.focus}
-        name={cardValues.name}
-        number={cardValues.number}
+        cvc={formik.values.cvc}
+        expiry={formik.values.expiry}
+        focused={cardValues.focused}
+        name={formik.values.name}
+        number={formik.values.number}
       />
       <form action="">
-        <input
-          type="number"
-          name="cvc"
-          placeholder="CVC"
-          onChange={handleInputChange}
-        />
-        <input
-          type="date"
-          name="expiry"
-          placeholder="Expire Date"
-          onChange={handleInputChange}
-        />
-        <input
+        <Input
           type="text"
-          name="name"
-          placeholder="Your Name"
-          onChange={handleInputChange}
+          label={"CVC"}
+          id="cvc"
+          value={formik.values.cvc}
+          placeholder=""
+          handleChange={formik.handleChange}
+          handleFocus={handleInputFocus}
+          handleBlur={formik.handleBlur}
+          errorMessage={formik.errors.cvc}
+          hasErrorMessage={formik.touched.cvc}
         />
-        <input
+        <Input
+          type="string"
+          label={"Fecha de expiración"}
+          id="expiry"
+          value={formik.values.expiry}
+          placeholder=""
+          handleChange={formik.handleChange}
+          handleFocus={handleInputFocus}
+          handleBlur={formik.handleBlur}
+          errorMessage={formik.errors.expiry}
+          hasErrorMessage={formik.touched.expiry}
+        />
+        <Input
+          type="text"
+          label={"Nombre del titular"}
+          id="name"
+          value={formik.values.name}
+          placeholder=""
+          handleChange={formik.handleChange}
+          handleFocus={handleInputFocus}
+          handleBlur={formik.handleBlur}
+          errorMessage={formik.errors.name}
+          hasErrorMessage={formik.touched.name}
+        />
+
+        <Input
           type="tel"
-          name="number"
-          placeholder="Card Number"
-          onChange={handleInputChange}
+          label={"Numero de tarjeta"}
+          id="number"
+          value={formik.values.number}
+          placeholder=""
+          handleChange={formik.handleChange}
+          handleFocus={handleInputFocus}
+          handleBlur={formik.handleBlur}
+          errorMessage={formik.errors.number}
+          hasErrorMessage={formik.touched.number}
         />
       </form>
     </div>
