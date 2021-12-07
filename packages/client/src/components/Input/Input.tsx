@@ -15,6 +15,7 @@ export default function Input({
   handleBlur = () => {},
   handleFocus = () => {},
   handleInput = () => {},
+  maxLength = 100000,
   errorMessage,
   hasErrorMessage,
   ...props
@@ -39,6 +40,7 @@ export default function Input({
           onChange={handleChange}
           onBlur={handleBlur}
           onFocus={handleFocus}
+          maxLength={maxLength}
           // onInput={handleInput}
           {...props}
         />

@@ -20,6 +20,7 @@ export interface InputProps {
   handleBlur?: any;
   handleFocus?: any;
   handleInput?: any;
+  maxLength?: number;
   errorMessage?: string | any;
   hasErrorMessage?: boolean | any;
 }
@@ -67,6 +68,7 @@ interface DeliveryState {
   city: string;
   cp: string;
   phone: string;
+  deliveryDate: string;
 }
 
 interface PaymentState {

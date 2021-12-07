@@ -18,6 +18,11 @@ export default function Delivery(): React.ReactElement {
 
   const navigate = useNavigate();
 
+  const currentDate = new Date(new Date().getTime() + 48 * 60 * 60 * 1000);
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+
   const formik = useFormik({
     initialValues: {
       name: purchaseState.delivery.name,
@@ -38,6 +43,7 @@ export default function Delivery(): React.ReactElement {
         city: deliveryState.city,
         cp: deliveryState.cp,
         phone: deliveryState.phone,
+        deliveryDate: `${day}/${month}/${year}`,
       };
       dispatch(addDelivery(deliveryInfo));
       navigate(PUBLIC.PAYMENT);

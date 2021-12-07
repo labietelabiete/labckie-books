@@ -7,6 +7,7 @@ const initialState: any = {
     city: "",
     cp: "",
     phone: "",
+    deliveryDate: "",
   },
   payment: {
     cvc: "",

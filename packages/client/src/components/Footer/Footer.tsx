@@ -40,6 +40,16 @@ export default function Footer(): React.ReactElement {
         >
           <p className="mb-0 px-2">labietelabiete</p>
         </a>
+        <p className="mb-0 px-0">|</p>
+
+        <a
+          href="https://blackiebooks.org/"
+          target="_blank"
+          rel="noreferrer"
+          className="px-2 text-lg"
+        >
+          <p className="mb-0 px-2">blackie books</p>
+        </a>
 
         <p className="mb-0 px-2"> ©2021</p>
         <a

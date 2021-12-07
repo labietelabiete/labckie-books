@@ -20,6 +20,7 @@ import "react-credit-cards/es/styles-compiled.css";
 
 export default function Payment() {
   const cartState = useSelector((state: any) => state.cart);
+  const purchaseState = useSelector((state: any) => state.purchase);
   const dispatch = useDispatch<any>();
   const [cardValues, setCardValues] = useState<ReactCreditCardProps>({
     cvc: "",
@@ -28,11 +29,6 @@ export default function Payment() {
     name: "",
     number: "",
   });
-
-  const currentDate = new Date(new Date().getTime() + 48 * 60 * 60 * 1000);
-  const day = currentDate.getDate();
-  const month = currentDate.getMonth() + 1;
-  const year = currentDate.getFullYear();
 
   const formik = useFormik({
     initialValues: {
@@ -43,11 +39,10 @@ export default function Payment() {
     },
     validationSchema: creditCardSchema,
     onSubmit: async (paymentState) => {
-      console.log(paymentState);
       const paymentInfo = {
         cvc: paymentState.cvc,
-        expiry: paymentState.expiry,
-        name: paymentState.name,
+        expiry: `${paymentState.expiry[0]}${paymentState.expiry[1]}/${paymentState.expiry[2]}${paymentState.expiry[3]}`,
+        name: paymentState.name.toUpperCase(),
         number: paymentState.number,
       };
       dispatch(addPayment(paymentInfo));
@@ -64,7 +59,10 @@ export default function Payment() {
 
   return (
     <Layout docTitle="Payment">
-      <div className="flex justify-center mt-20 mx-36">
+      <form
+        className="flex justify-center mt-20 mx-36"
+        onSubmit={formik.handleSubmit}
+      >
         <div
           className="p-8 bg-white rounded-3xl shadow-xl mr-12 w-1/2"
           id="PaymentForm"
@@ -79,7 +77,7 @@ export default function Payment() {
             name={formik.values.name}
             number={formik.values.number}
           />
-          <form className="mt-6" onSubmit={formik.handleSubmit}>
+          <div className="mt-6">
             <div className="flex justify-between">
               <div className="w-11/12 mr-6">
                 <Input
@@ -97,11 +95,12 @@ export default function Payment() {
               </div>
               <div>
                 <Input
-                  type="string"
+                  type="text"
                   label={"Expiración"}
                   id="expiry"
                   value={formik.values.expiry}
                   placeholder=""
+                  maxLength={4}
                   handleChange={formik.handleChange}
                   handleFocus={handleInputFocus}
                   handleBlur={formik.handleBlur}
@@ -113,11 +112,12 @@ export default function Payment() {
             <div className="flex justify-between">
               <div className="w-11/12 mr-6">
                 <Input
-                  type="tel"
+                  type="text"
                   label={"Numero de tarjeta"}
                   id="number"
                   value={formik.values.number}
                   placeholder=""
+                  maxLength={19}
                   handleChange={formik.handleChange}
                   handleFocus={handleInputFocus}
                   handleBlur={formik.handleBlur}
@@ -132,6 +132,7 @@ export default function Payment() {
                   id="cvc"
                   value={formik.values.cvc}
                   placeholder=""
+                  maxLength={3}
                   handleChange={formik.handleChange}
                   handleFocus={handleInputFocus}
                   handleBlur={formik.handleBlur}
@@ -140,7 +141,7 @@ export default function Payment() {
                 />
               </div>
             </div>
-          </form>
+          </div>
         </div>
         <div className="p-8 bg-white rounded-3xl shadow-xl h-1/3">
           <h2 className="mb-6 text-4xl font-bold font-oswald">
@@ -165,7 +166,7 @@ export default function Payment() {
           <div className="flex items-end">
             <p className="text-xl font-mulish">Fecha de entrega: </p>
             <p className="text-2xl ml-3 font-oswald font-bold">
-              {`${day}/${month}/${year}`}
+              {purchaseState.delivery.deliveryDate}
             </p>
           </div>
 
@@ -188,7 +189,7 @@ export default function Payment() {
             </button>
           </div>
         </div>
-      </div>
+      </form>
     </Layout>
   );
 }
