@@ -92,7 +92,7 @@ export interface BookPurchase {
 }
 
 export interface Purchase {
-  totalPrice: string;
+  totalPrice: number | string;
   totalBooks: number;
   delivery: DeliveryState;
   payment: PaymentState;

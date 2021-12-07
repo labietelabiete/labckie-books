@@ -8,9 +8,12 @@ async function create(req: Request, res: Response, next: NextFunction) {
 
     console.log(purchaseObject);
 
-    await db.Purchase.create(purchaseObject);
+    const { _id: purchaseId } = await db.Purchase.create(purchaseObject);
 
-    res.status(200).send({ message: "Purchase created succesfully!" });
+    res.status(200).send({
+      message: "Purchase created succesfully!",
+      purchaseId: purchaseId,
+    });
   } catch (error: any) {
     res.status(500).send({
       message: "Error creating purchase",

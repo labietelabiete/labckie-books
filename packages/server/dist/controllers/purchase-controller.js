@@ -20,8 +20,11 @@ function create(req, res, next) {
         try {
             const { purchaseObject } = req.body;
             console.log(purchaseObject);
-            yield models_1.default.Purchase.create(purchaseObject);
-            res.status(200).send({ message: "Purchase created succesfully!" });
+            const { _id: purchaseId } = yield models_1.default.Purchase.create(purchaseObject);
+            res.status(200).send({
+                message: "Purchase created succesfully!",
+                purchaseId: purchaseId,
+            });
         }
         catch (error) {
             res.status(500).send({
