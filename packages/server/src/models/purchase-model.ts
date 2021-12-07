@@ -9,7 +9,7 @@ const bookPurchaseSchema = new Schema<BookPurchase>({
 
 const purchaseSchema = new Schema<Purchase>({
   totalPrice: {
-    type: Number,
+    type: String,
     required: [true, "Total price is required"],
   },
   totalBooks: {

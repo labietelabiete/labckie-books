@@ -19,7 +19,8 @@ function create(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const { purchaseObject } = req.body;
-            yield models_1.default.Purchase.create({ purchaseObject });
+            console.log(purchaseObject);
+            yield models_1.default.Purchase.create(purchaseObject);
             res.status(200).send({ message: "Purchase created succesfully!" });
         }
         catch (error) {

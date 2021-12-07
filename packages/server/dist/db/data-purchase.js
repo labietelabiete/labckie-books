@@ -4,7 +4,7 @@ exports.getSeedPurchase = void 0;
 function getSeedPurchase() {
     return [
         {
-            totalPrice: 100,
+            totalPrice: "100",
             totalBooks: 4,
             delivery: {
                 name: "Vicor Hugo",

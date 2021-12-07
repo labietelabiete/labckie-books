@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useFormik } from "formik";
 
+import { createPurchase } from "./../../api/purchase-api";
+
 import { PUBLIC } from "../../constants/routes";
 
 import Layout from "../../components/Layout";
@@ -12,7 +14,11 @@ import Input from "../../components/Input";
 import { addPayment } from "../../redux/purchase/actions";
 import { getTotalPrice, getTotalBooks } from "../../utils/cart-functions";
 
-import { ReactCreditCardProps } from "../../utils/types";
+import {
+  ReactCreditCardProps,
+  CartReduxState,
+  BookPurchase,
+} from "../../utils/types";
 
 import creditCardSchema from "./credit-card-schema";
 
@@ -49,6 +55,19 @@ export default function Payment() {
         number: paymentState.number,
       };
       dispatch(addPayment(paymentInfo));
+      const booksInfo: BookPurchase[] = [];
+      cartState.books.forEach((book: CartReduxState) => {
+        booksInfo.push({ n: book.n, _id: book._id, title: book.title });
+      });
+
+      const purchaseObject = {
+        totalPrice: getTotalPrice(cartState.books),
+        totalBooks: getTotalBooks(cartState.books),
+        delivery: purchaseState.delivery,
+        payment: paymentInfo,
+        books: booksInfo,
+      };
+      await createPurchase(purchaseObject);
       navigate(PUBLIC.CONFIRMATION);
     },
   });

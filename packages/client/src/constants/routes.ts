@@ -14,4 +14,5 @@ export const API = {
   MAIN: REACT_APP_API_ROUTE,
   BOOK: "/books",
   AUTHOR: "/authors",
+  PURCHASE: "/purchase",
 };

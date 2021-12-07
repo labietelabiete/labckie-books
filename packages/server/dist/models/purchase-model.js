@@ -9,7 +9,7 @@ const bookPurchaseSchema = new mongoose_1.Schema({
 });
 const purchaseSchema = new mongoose_1.Schema({
     totalPrice: {
-        type: Number,
+        type: String,
         required: [true, "Total price is required"],
     },
     totalBooks: {

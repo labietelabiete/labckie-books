@@ -82,6 +82,23 @@ export interface PurchaseReduxState {
   delivery: DeliveryState;
   payment: PaymentState;
 }
+
+// Purchase objects
+
+export interface BookPurchase {
+  n: number;
+  _id: string | any;
+  title: string | any;
+}
+
+export interface Purchase {
+  totalPrice: string;
+  totalBooks: number;
+  delivery: DeliveryState;
+  payment: PaymentState;
+  books: BookPurchase[];
+}
+
 // Books objects
 
 interface TechData {
