@@ -8,6 +8,12 @@ const initialState: any = {
     cp: "",
     phone: "",
   },
+  payment: {
+    cvc: "",
+    expiry: "",
+    name: "",
+    number: "",
+  },
 };
 
 export default initialState;

@@ -9,6 +9,7 @@ import { PUBLIC } from "../../constants/routes";
 import Layout from "../../components/Layout";
 import Input from "../../components/Input";
 
+import { addPayment } from "../../redux/purchase/actions";
 import { getTotalPrice, getTotalBooks } from "../../utils/cart-functions";
 
 import { ReactCreditCardProps } from "../../utils/types";
@@ -19,6 +20,7 @@ import "react-credit-cards/es/styles-compiled.css";
 
 export default function Payment() {
   const cartState = useSelector((state: any) => state.cart);
+  const dispatch = useDispatch<any>();
   const [cardValues, setCardValues] = useState<ReactCreditCardProps>({
     cvc: "",
     expiry: "",
@@ -40,8 +42,16 @@ export default function Payment() {
       number: "",
     },
     validationSchema: creditCardSchema,
-    onSubmit: async (creditCardState) => {
-      console.log(creditCardState);
+    onSubmit: async (paymentState) => {
+      console.log(paymentState);
+      const paymentInfo = {
+        cvc: paymentState.cvc,
+        expiry: paymentState.expiry,
+        name: paymentState.name,
+        number: paymentState.number,
+      };
+      dispatch(addPayment(paymentInfo));
+      // navigate(PUBLIC.PAYMENT);
     },
   });
 
@@ -165,16 +175,17 @@ export default function Payment() {
             </p>
           </div>
           <div className="flex mt-12 justify-between">
-            <Link to={PUBLIC.HOME}>
+            <Link to={PUBLIC.DELIVERY}>
               <button className="py-2 px-6 rounded-xl bg-black text-white font-mulish hover:opacity-80">
                 Volver
               </button>
             </Link>
-            <Link to={PUBLIC.DELIVERY}>
-              <button className="py-2 px-6 rounded-xl bg-salmonSecondary text-white font-mulish hover:opacity-80">
-                Pagar
-              </button>
-            </Link>
+            <button
+              className="py-2 px-6 rounded-xl bg-salmonSecondary text-white font-mulish hover:opacity-80"
+              type="submit"
+            >
+              Pagar
+            </button>
           </div>
         </div>
       </div>

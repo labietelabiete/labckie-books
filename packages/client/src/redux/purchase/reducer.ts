@@ -1,5 +1,5 @@
 import initialState from "./state";
-import { RESET_PURCHASE, ADD_DELIVERY } from "./types";
+import { RESET_PURCHASE, ADD_DELIVERY, ADD_PAYMENT } from "./types";
 
 import { PurchaseReduxState } from "../../utils/types";
 
@@ -15,6 +15,12 @@ const reducer = (
       return {
         ...state,
         delivery: action.payload,
+      };
+    }
+    case ADD_PAYMENT: {
+      return {
+        ...state,
+        payment: action.payload,
       };
     }
     default:

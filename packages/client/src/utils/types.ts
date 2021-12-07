@@ -36,7 +36,7 @@ export type Focused = "name" | "number" | "expiry" | "cvc";
 export interface ReactCreditCardProps {
   acceptedCards?: ReadonlyArray<string> | undefined;
   callback?: ((type: CallbackArgument, isValid: boolean) => void) | undefined;
-  cvc: string | number ;
+  cvc: string | number;
   expiry: string | number;
   focused?: Focused | undefined;
   issuer?: string | undefined;
@@ -59,7 +59,7 @@ export interface CartReduxState {
   price: number | any;
 }
 
-export interface PurchaseReduxState {
+interface DeliveryState {
   name: string;
   lastName: string;
   email: string;
@@ -67,6 +67,18 @@ export interface PurchaseReduxState {
   city: string;
   cp: string;
   phone: string;
+}
+
+interface PaymentState {
+  cvc: string;
+  expiry: string;
+  name: string;
+  number: string;
+}
+
+export interface PurchaseReduxState {
+  delivery: DeliveryState;
+  payment: PaymentState;
 }
 // Books objects
 
