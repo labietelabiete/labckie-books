@@ -55,11 +55,12 @@ export default function Payment() {
         number: paymentState.number,
       };
       dispatch(addPayment(paymentInfo));
+
+      // Creating purchase object for database
       const booksInfo: BookPurchase[] = [];
       cartState.books.forEach((book: CartReduxState) => {
         booksInfo.push({ n: book.n, _id: book._id, title: book.title });
       });
-
       const purchaseObject = {
         totalPrice: getTotalPrice(cartState.books),
         totalBooks: getTotalBooks(cartState.books),
@@ -67,6 +68,7 @@ export default function Payment() {
         payment: paymentInfo,
         books: booksInfo,
       };
+
       await createPurchase(purchaseObject);
       navigate(PUBLIC.CONFIRMATION);
     },
