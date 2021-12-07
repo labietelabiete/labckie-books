@@ -44,7 +44,7 @@ export default function BookCard({
     <div className="m-3 mb-10 pb-4 border-4 border-black border-opacity-0 rounded-xl hover:border-opacity-100">
       <Link to={`${PUBLIC.BOOK}/${book._id}`}>
         <img
-          className={book.authorId ? `bg-white rounded-t-xl p-9` : "p-6"}
+          className={book.authorId ? `bg-white rounded-t-xl p-9 w-full` : "p-6 w-full"}
           src={book.images.main}
           alt={book.title}
         />

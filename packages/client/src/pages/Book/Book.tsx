@@ -86,7 +86,7 @@ export default function Book(): React.ReactElement {
       ) : (
         <div className="flex justify-center mt-28 mx-24">
           <div className="mr-12">
-            <img className="" src={book?.images.main} alt={book?.title} />
+            <img className="w-full" src={book?.images.main} alt={book?.title} />
           </div>
           <div className="w-1/2 mt-12">
             <Link to={`${PUBLIC.AUTHOR}/${book?.authorId._id}`}>
