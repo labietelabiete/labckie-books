@@ -81,6 +81,7 @@ interface PaymentState {
 export interface PurchaseReduxState {
   delivery: DeliveryState;
   payment: PaymentState;
+  purchaseId: string;
 }
 
 // Purchase objects

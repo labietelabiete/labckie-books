@@ -11,7 +11,7 @@ import { PUBLIC } from "../../constants/routes";
 import Layout from "../../components/Layout";
 import Input from "../../components/Input";
 
-import { addPayment } from "../../redux/purchase/actions";
+import { addPayment, addPurchaseId } from "../../redux/purchase/actions";
 import { getTotalPrice, getTotalBooks } from "../../utils/cart-functions";
 
 import {
@@ -69,7 +69,9 @@ export default function Payment() {
         books: booksInfo,
       };
 
-      await createPurchase(purchaseObject);
+      const purchaseId = await createPurchase(purchaseObject);
+      console.log(purchaseId.data.purchaseId);
+      dispatch(addPurchaseId(purchaseId.data.purchaseId));
       navigate(PUBLIC.CONFIRMATION);
     },
   });

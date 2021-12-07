@@ -29,7 +29,7 @@ export default function Confirmation() {
             </span>
             toda la información de su pedido con id
             <span className="mx-1 text-black font-oswald">
-              406-8712636-9777100:
+              {purchaseState.purchaseId}:
             </span>
           </p>
           <div>
@@ -54,7 +54,9 @@ export default function Confirmation() {
             </div>
           </div>
           <div className="flex my-6 items-end">
-            <p className="text-xl text-greyPrimary font-mulish">Precio total:</p>
+            <p className="text-xl text-greyPrimary font-mulish">
+              Precio total:
+            </p>
             <p className="text-2xl ml-3 font-oswald font-bold">
               {getTotalPrice(cartState.books)}€
             </p>

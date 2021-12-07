@@ -15,6 +15,7 @@ const initialState: any = {
     name: "",
     number: "",
   },
+  purchaseId: "",
 };
 
 export default initialState;
