@@ -27,6 +27,11 @@ export default function Payment() {
     number: "",
   });
 
+  const currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+
   const formik = useFormik({
     initialValues: {
       cvc: "",
@@ -143,10 +148,17 @@ export default function Payment() {
               {getTotalPrice(cartState.books)}€
             </p>
           </div>
-          <div className="flex items-end">
-            <p className="text-xl font-mulish">Gastos de envío</p>
+          <div className="flex mb-3 items-end">
+            <p className="text-xl font-mulish">Gastos de envío: </p>
             <p className="text-2xl ml-3 font-oswald font-bold">0€</p>
           </div>
+          <div className="flex items-end">
+            <p className="text-xl font-mulish">Fecha de entrega: </p>
+            <p className="text-2xl ml-3 font-oswald font-bold">
+              {`${day}/${month}/${year}`}
+            </p>
+          </div>
+
           <div className="flex mt-9 text-3xl font-oswald">
             <p className="font-bold">
               Total: {getTotalPrice(cartState.books)}€

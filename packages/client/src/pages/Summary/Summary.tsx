@@ -34,10 +34,10 @@ export default function Summary(): React.ReactElement {
               {getTotalPrice(cartState.books)}€
             </p>
           </div>
-          <div className="flex items-end">
+          {/* <div className="flex items-end">
             <p className="text-xl font-mulish">Gastos de envío</p>
             <p className="text-2xl ml-3 font-oswald font-bold">0€</p>
-          </div>
+          </div> */}
           <div className="flex mt-9 text-3xl font-oswald">
             <p className="font-bold">
               Total: {getTotalPrice(cartState.books)}€
