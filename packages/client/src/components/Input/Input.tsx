@@ -22,7 +22,7 @@ export default function Input({
   return (
     <div>
       {label ? (
-        <label className="text-2xl font-bold font-oswald" htmlFor={id}>
+        <label className="text-xl font-bold font-oswald" htmlFor={id}>
           {label}
         </label>
       ) : (
