@@ -27,7 +27,7 @@ export default function Payment() {
     number: "",
   });
 
-  const currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  const currentDate = new Date(new Date().getTime() + 48 * 60 * 60 * 1000);
   const day = currentDate.getDate();
   const month = currentDate.getMonth() + 1;
   const year = currentDate.getFullYear();
