@@ -22,6 +22,9 @@ export default function Payment() {
   const cartState = useSelector((state: any) => state.cart);
   const purchaseState = useSelector((state: any) => state.purchase);
   const dispatch = useDispatch<any>();
+
+  const navigate = useNavigate();
+
   const [cardValues, setCardValues] = useState<ReactCreditCardProps>({
     cvc: "",
     expiry: "",
@@ -46,7 +49,7 @@ export default function Payment() {
         number: paymentState.number,
       };
       dispatch(addPayment(paymentInfo));
-      // navigate(PUBLIC.PAYMENT);
+      navigate(PUBLIC.CONFIRMATION);
     },
   });
 

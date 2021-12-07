@@ -7,6 +7,7 @@ export const PUBLIC = {
   SUMMARY: "/cart-summary",
   DELIVERY: "/checkout/devivery",
   PAYMENT: "/checkout/paymennt",
+  CONFIRMATION: "/checkout/confirmation",
 };
 
 export const API = {
