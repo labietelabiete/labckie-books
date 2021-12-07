@@ -1,11 +1,14 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Layout from "../../components/Layout";
 
 import { PUBLIC } from "../../constants/routes";
+
+import { resetPurchase } from "../../redux/purchase/actions";
+import { resetCart } from "../../redux/cart/actions";
 
 import { getTotalPrice } from "../../utils/cart-functions";
 
@@ -14,6 +17,15 @@ import logo from "./../../assets/images/logo.png";
 export default function Confirmation() {
   const purchaseState = useSelector((state: any) => state.purchase);
   const cartState = useSelector((state: any) => state.cart);
+  const dispatch = useDispatch<any>();
+
+  const navigate = useNavigate();
+
+  const handleResetPurchase = () => {
+    dispatch(resetPurchase());
+    dispatch(resetCart());
+    navigate(PUBLIC.HOME);
+  };
 
   return (
     <Layout docTitle="Confirmation">
@@ -61,11 +73,12 @@ export default function Confirmation() {
               {getTotalPrice(cartState.books)}€
             </p>
           </div>
-          {/* <Link className="text-right" to={PUBLIC.HOME}>
-              <button className="py-2 px-6 rounded-xl bg-black text-white font-mulish hover:opacity-80">
-                Home
-              </button>
-            </Link> */}
+          <button
+            className="py-2 px-6 rounded-xl bg-black text-white font-mulish hover:opacity-80"
+            onClick={handleResetPurchase}
+          >
+            Home
+          </button>
         </div>
         <div className="w-1/2 text-right">
           <img
