@@ -6,6 +6,7 @@ import cors from "cors";
 import { bookRouter } from "./routes/book-routes";
 import { authorRouter } from "./routes/author-routes";
 import { searchRouter } from "./routes/search-routes";
+import { purchaseRouter } from "./routes/purchase-routes";
 
 export const app = express();
 
@@ -16,4 +17,5 @@ app.use(cors());
 
 app.use("/books", bookRouter);
 app.use("/authors", authorRouter);
+app.use("/purchase", purchaseRouter);
 app.use("/search", searchRouter);

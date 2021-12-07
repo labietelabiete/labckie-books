@@ -3,6 +3,7 @@ import { config } from "./config/config";
 import { connect } from "./db/connect";
 // import { seedAuthors } from "./db/seed";
 // import { seedBooks } from "./db/seed";
+// import { seedPurchase } from "./db/seed";
 
 connect()
   .then(async () => {
@@ -11,6 +12,7 @@ connect()
     });
     // await seedAuthors();
     // await seedBooks();
+    // await seedPurchase();
   })
   .catch((error) => {
     console.log(`Error connecting the server: ${error}`);

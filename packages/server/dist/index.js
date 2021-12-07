@@ -14,6 +14,7 @@ const config_1 = require("./config/config");
 const connect_1 = require("./db/connect");
 // import { seedAuthors } from "./db/seed";
 // import { seedBooks } from "./db/seed";
+// import { seedPurchase } from "./db/seed";
 (0, connect_1.connect)()
     .then(() => __awaiter(void 0, void 0, void 0, function* () {
     server_1.app.listen(config_1.config.app.port, () => {
@@ -21,6 +22,7 @@ const connect_1 = require("./db/connect");
     });
     // await seedAuthors();
     // await seedBooks();
+    // await seedPurchase();
 }))
     .catch((error) => {
     console.log(`Error connecting the server: ${error}`);

@@ -11,6 +11,7 @@ const cors_1 = __importDefault(require("cors"));
 const book_routes_1 = require("./routes/book-routes");
 const author_routes_1 = require("./routes/author-routes");
 const search_routes_1 = require("./routes/search-routes");
+const purchase_routes_1 = require("./routes/purchase-routes");
 exports.app = (0, express_1.default)();
 exports.app.use(express_1.default.json());
 exports.app.use((0, morgan_1.default)("dev"));
@@ -18,5 +19,6 @@ exports.app.use((0, helmet_1.default)());
 exports.app.use((0, cors_1.default)());
 exports.app.use("/books", book_routes_1.bookRouter);
 exports.app.use("/authors", author_routes_1.authorRouter);
+exports.app.use("/purchase", purchase_routes_1.purchaseRouter);
 exports.app.use("/search", search_routes_1.searchRouter);
 //# sourceMappingURL=server.js.map

@@ -38,3 +38,35 @@ export interface Book {
   images: Images;
   colors: string[];
 }
+
+export interface Delivery {
+  name: string;
+  lastName: string;
+  email: string;
+  direction: string;
+  city: string;
+  cp: string;
+  phone: string;
+  deliveryDate: string;
+}
+
+export interface Payment {
+  cvc: string;
+  expiry: string;
+  name: string;
+  number: string;
+}
+
+export interface BookPurchase {
+  n: number;
+  _id: string | any;
+  title: string | any;
+}
+
+export interface Purchase {
+  delivery: Delivery;
+  payment: Payment;
+  books: BookPurchase[];
+  totalPrice: number;
+  totalBooks: number;
+}

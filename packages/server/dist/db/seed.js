@@ -9,11 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.seedBooks = exports.seedAuthors = void 0;
+exports.seedPurchase = exports.seedBooks = exports.seedAuthors = void 0;
 const author_model_1 = require("../models/author-model");
 const book_model_1 = require("../models/book-model");
+const purchase_model_1 = require("../models/purchase-model");
 const data_authors_1 = require("./data-authors");
 const data_books_1 = require("./data-books");
+const data_purchase_1 = require("./data-purchase");
 function seedAuthors() {
     return __awaiter(this, void 0, void 0, function* () {
         const results = (0, data_authors_1.getSeedAuthors)();
@@ -32,4 +34,12 @@ function seedBooks() {
     });
 }
 exports.seedBooks = seedBooks;
+function seedPurchase() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const results = yield (0, data_purchase_1.getSeedPurchase)();
+        yield purchase_model_1.Purchase.create([...results]);
+        console.log("Purchases seeding finished");
+    });
+}
+exports.seedPurchase = seedPurchase;
 //# sourceMappingURL=seed.js.map

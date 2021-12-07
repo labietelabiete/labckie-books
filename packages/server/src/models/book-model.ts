@@ -1,7 +1,4 @@
-// const mongoose = require("mongoose");
-// const { Schema } = require("mongoose");
 import { Schema, model } from "mongoose";
-// import { validator } from "validator";
 const validator = require("validator");
 import { Book } from "./../utils/types";
 
