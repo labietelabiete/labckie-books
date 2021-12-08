@@ -1,4 +1,4 @@
-const { REACT_APP_API_ROUTE } = process.env;
+// const { REACT_APP_API_ROUTE } = process.env;
 
 export const PUBLIC = {
   HOME: "/",
@@ -11,7 +11,7 @@ export const PUBLIC = {
 };
 
 export const API = {
-  MAIN: REACT_APP_API_ROUTE,
+  MAIN: "https://labckie-books-api.herokuapp.com",
   BOOK: "/books",
   AUTHOR: "/authors",
   PURCHASE: "/purchase",
