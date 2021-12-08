@@ -42,7 +42,7 @@ function getAll(req, res, next) {
             ]);
             yield models_1.default.Book.populate(books, {
                 path: "authorId",
-                option: { select: "firstName lastName" },
+                // option: { select: "firstName lastName" },
             });
             res.status(200).send({ books });
         }

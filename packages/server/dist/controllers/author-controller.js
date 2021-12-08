@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.authorController = void 0;
+var mongoose = require("mongoose");
 const models_1 = __importDefault(require("../models"));
 function getAll(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -50,7 +51,7 @@ function getAll(req, res, next) {
 function getById(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const { id: authorId } = req.params;
+            let { id: authorId } = req.params;
             const author = yield models_1.default.Author.findOne({ _id: authorId }, {
                 firstName: 1,
                 lastName: 1,
@@ -59,7 +60,7 @@ function getById(req, res, next) {
                 bio: 1,
                 picture: 1,
             }).lean();
-            const books = yield models_1.default.Book.find({ authorId: authorId }, {
+            const books = yield models_1.default.Book.find({ authorId: mongoose.Types.ObjectId(authorId) }, {
                 title: 1,
                 caption: 1,
                 images: 1,

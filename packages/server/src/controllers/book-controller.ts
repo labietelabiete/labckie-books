@@ -32,7 +32,7 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
 
     await db.Book.populate(books, {
       path: "authorId",
-      option: { select: "firstName lastName" },
+      // option: { select: "firstName lastName" },
     });
 
     res.status(200).send({ books });

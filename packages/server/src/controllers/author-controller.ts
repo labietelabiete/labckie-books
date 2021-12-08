@@ -1,3 +1,5 @@
+import { Mongoose } from "mongoose";
+var mongoose = require("mongoose");
 import db from "../models";
 import { Request, Response, NextFunction } from "express";
 import { Author, Book } from "./../utils/types";
@@ -38,7 +40,7 @@ async function getAll(req: Request, res: Response, next: NextFunction) {
 
 async function getById(req: Request, res: Response, next: NextFunction) {
   try {
-    const { id: authorId } = req.params;
+    let { id: authorId } = req.params;
 
     const author: Author = await db.Author.findOne(
       { _id: authorId },
@@ -53,7 +55,7 @@ async function getById(req: Request, res: Response, next: NextFunction) {
     ).lean();
 
     const books: Book[] = await db.Book.find(
-      { authorId: authorId },
+      { authorId: mongoose.Types.ObjectId(authorId) },
       {
         title: 1,
         caption: 1,

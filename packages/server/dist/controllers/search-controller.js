@@ -20,24 +20,28 @@ function searchBooks(req, res, next) {
         try {
             const searchText = (_a = req.query) === null || _a === void 0 ? void 0 : _a.q;
             const { limit = 8 } = req.query;
-            const books = yield models_1.default.Book.find({
-                $or: [
-                    { title: { $regex: searchText, $options: "i" } },
-                    { caption: { $regex: searchText, $options: "i" } },
-                ],
-            }, {
-                title: 1,
-                caption: 1,
-                price: 1,
-                stock: 1,
-                authorId: 1,
-                createdAt: 1,
-            }, {
-                $sort: {
-                    createdAt: -1,
-                },
-            }).limit(limit);
-            return res.status(200).send({ message: "Successfully searched", books });
+            // const books: Book[] = await db.Book.find(
+            //   {
+            //     $or: [
+            //       { title: { : searchText, $options: "i" } },
+            //       { caption: { $regex: searchText, $options: "i" } },
+            //     ],
+            //   },
+            //   {
+            //     title: 1,
+            //     caption: 1,
+            //     price: 1,
+            //     stock: 1,
+            //     authorId: 1,
+            //     createdAt: 1,
+            //   },
+            //   {
+            //     $sort: {
+            //       createdAt: -1,
+            //     },
+            //   },
+            // ).limit(limit);
+            return res.status(200).send({ message: "Successfully searched" });
         }
         catch (error) {
             res.status(500).send({
