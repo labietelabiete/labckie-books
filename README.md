@@ -2,6 +2,9 @@
 
 # TODO List
 
+## Responsive design
+
+Mobile strategy
 ## Create banners
 
 Create banners to create more content based on blackie designs
